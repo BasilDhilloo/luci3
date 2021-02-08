@@ -5,12 +5,15 @@ import styles from "./home.module.css";
 // import luciImage from './../../assets/Luci.png';
 // import signImg from './../../assets/log-in.png'
 // import loginImg from './../../assets/Group 10.png'
-import Header from '../header2/Header';
-import Footer from '../footer/Footer';
+import Headers from '../header2/Header';
+import Footers from '../footer/Footer';
 import {withRouter} from 'react-router-dom';
 import { BsBoxArrowInRight } from 'react-icons/bs'
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import { Layout } from 'antd';
+import bg from '../../assets/bg.jpeg';
+import bg2 from '../../assets/b.jpeg';
 
 // import { IconContext } from 'react-icons';
 
@@ -22,10 +25,11 @@ class Home extends Component {
     }
 
     render() {
+        const { Header, Footer, Sider, Content } = Layout;
         return (
             // <IconContext.Provider value={{ style: { verticalAlign: 'middle' } }}>
                     <div>
-                        <Header />
+                        {/* <Header />
                         <section className={styles.home}>
                       <div className="container-fluid">
 
@@ -50,7 +54,41 @@ class Home extends Component {
                                 </div>
                             </div>
                         </section>
-                        <Footer />
+                        <Footer /> */}
+       
+
+    <Layout>
+     
+          <Headers/>
+
+      <Content  className="content">
+          <div className="main-container bg">
+            
+            <div className="row">
+            <h2 style={{fontSize:"140px"}}>Luci</h2>
+            </div>
+            <div>
+            <div className="row">
+                <p>hello world hello world</p>
+                </div> 
+                <div className="row">
+       <button onClick={() => this.nextPath('/signup')} className={styles.homeButtonSign}> < BsBoxArrowInRight />   <span>Sign up </span></button>    
+
+                </div>
+                <div className="row">
+                    
+                <button onClick={() => this.nextPath('/login')} className={styles.homeButtonLogin}> <i class="fas fa-paper-plane"></i><span>Login</span> </button>
+
+                </div>
+            </div>
+          </div>
+
+
+
+      </Content>
+<Footers/>
+      
+    </Layout>
                     </div>
             // </IconContext.Provider>
       

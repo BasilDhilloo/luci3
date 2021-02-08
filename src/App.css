@@ -1,7 +1,19 @@
 .App {
   text-align: center;
 }
+.content
+{
+  min-height: 100vh;
+  overflow: hidden;
 
+}
+.bg{
+  background-image: url(../src/assets/b.jpeg);
+  min-height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
 /* *{
   padding: 0;
   margin: 0;
