@@ -63,7 +63,7 @@
     box-sizing: border-box;
     filter: drop-shadow(0px 0px 4px rgba(0, 0, 0, 0.15));
     border-radius: 27px;  
-    margin-top: 350px;
+    /* margin-top: 350px; */
     margin-left: 65px;
     color: #4B176A;
     font-family: "Montserrat";
@@ -121,7 +121,7 @@
     margin-left: 4px;
 } */
 
-@media only screen and (max-width: 370px) {
+/* @media only screen and (max-width: 370px) {
     .rowOne{
         overflow: auto;
     }
@@ -167,9 +167,9 @@
         height: 100vh;
         width: 100%;
     }
-  }
+  } */
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
     .rowOne{
         overflow: auto;
     }
@@ -215,10 +215,10 @@
         height: 100vh;
         width: 100%;
     }
-  }
+  } */
   
   /* Small devices (portrait tablets and large phones, 600px and up)  Ipad */
-  @media only screen and (min-width: 600px) {
+  /* @media only screen and (min-width: 600px) {
     .homeLuci{
         position: absolute;
         width: fit-content;
@@ -254,10 +254,10 @@
         margin-top: 20px;
         margin-left: 18px;
     }
-  }
+  } */
   
   /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
+  /* @media only screen and (min-width: 768px) {
     .homeLuci{
         position: absolute;
         width: fit-content;
@@ -293,9 +293,8 @@
         margin-top: 20px;
         margin-left: 40px;
     }
-  } 
-  
-  /* Large devices (laptops/desktops, 992px and up) ipad pro */
+  }  */
+/* 
   @media only screen and (min-width: 992px) {
     .homeLuci{
         position: absolute;
@@ -338,7 +337,7 @@
 
 
 
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
+
   @media only screen and (min-width: 1200px) {
     .homeLuci{
         position: absolute;
@@ -359,7 +358,7 @@
         margin-top: 365px;
         margin-left: 20px;
         text-align: left;
-        /* margin-left: 50px; */
+
         color: #4B176A;
         font-size: 28px;
     }
@@ -399,4 +398,24 @@
     .homeButtonSign{  
         margin-top: 150px;
     }
+  } */
+  .home_homeButtonSign__3OfXE
+  {
+      margin-top: 0% !important;
+
   }
+  
+  @media only screen and (max-width: 600px){
+    .homeButtonSign{  
+        margin-left: 19px;
+        width: 380px;
+    }
+    .homeButtonLogin
+    {
+        margin-left:19px;
+        width: 380px;
+    }
+  }
+  
+  
+  

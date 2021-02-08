@@ -8,11 +8,16 @@
 
 }
 .bg{
-  background-image: url(../src/assets/b.jpeg);
+  background-image: url(../src/assets/bg.jpeg);
   min-height: 100vh;
   background-size: 100% 100%;
   background-repeat: no-repeat;
 
+}
+.left
+{
+  position: relative;
+  left: 5%;
 }
 /* *{
   padding: 0;

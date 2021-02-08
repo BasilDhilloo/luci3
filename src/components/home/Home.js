@@ -64,11 +64,11 @@ class Home extends Component {
       <Content  className="content">
           <div className="main-container bg">
             
-            <div className="row">
+            <div className="row left">
             <h2 style={{fontSize:"140px"}}>Luci</h2>
             </div>
             <div>
-            <div className="row">
+            <div className="row left">
                 <p>hello world hello world</p>
                 </div> 
                 <div className="row">
