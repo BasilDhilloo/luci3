@@ -2,84 +2,107 @@ import React, { Component } from 'react'
 import styles from './income.module.css'
 import "./income.css"
 // import calIMage from './../../../assets/calimage.png'
+import { createUseStyles, useTheme } from 'react-jss';
+import { SidebarComponent, SidebarContext } from 'components/sidebar';
+import Header from 'components/header2/Header'
+import Footer from 'components/footer/Footer'
+
+import { Column, Row } from 'simple-flexbox';
+
 import {Form, FormControl, FormGroup, ControlLabel, HelpBlock, Checkbox, Radio, Button, Col, Image} from 'react-bootstrap';
+import { func } from 'prop-types';
 
 
-
-class Income extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            image: null
-        };
-
-        this.onImageChange = this.onImageChange.bind(this);
-    }
-
-    onImageChange = event => {
-        if (event.target.files && event.target.files[0]) {
-          let img = event.target.files[0];
-          this.setState({
-            image: URL.createObjectURL(img)
-          });
+const useStyles = createUseStyles({
+    container: {
+        height: '100%',
+        minHeight: 680
+    },
+    mainBlock: {
+        marginLeft: 255,
+        padding: 30,
+        '@media (max-width: 900px)': {
+            marginLeft: 0
         }
-      };
+    },
+    contentBlock: {
+        marginTop: 54
+    }
+});
+
+// const style = {
+//     height: "65vh",
+//     backgroundColor: 
+// }
 
 
-    render() {
+function Income (){
+    const theme = useTheme();
+    const classes = useStyles({ theme });
         return (
-            <div>
-                <div className="flex-container">
-                    <div className="flex-child">
-                     
 
-                    <Form>
-                        <Form.Row>
-                            <Form.Group as={Col}>
-                                <Form.Label>Number of Units</Form.Label>
-                                    <Form.Control type="text" />
-                                
-                                    <Form.Label>Total Monthly Rent Income ($)</Form.Label>
-                                    <Form.Control type="text" placeholder=" 0 0 0 0 0"  />
+            <div className="App">
+            <Header />
+            <div className={styles.propertyLayoutMain}>
+                <div className={styles.propertyLayoutSecond}>
+                    <div className={styles.propertyLayoutSider}>
+                    {/* <h1> This is property compenent</h1> */}
+                    <SidebarContext>
+                        <Row className={classes.container}>
+                        <SidebarComponent />
+                            <Column flexGrow={1} className={classes.mainBlock}>
+                                {/* <Header />? */}
+                                <div className={classes.contentBlock}>
+                                            
+                                    <div>
+                                        <div className="flex-container">
+                                            <div className="flex-child">
+                                            
 
-                                    <Form.Label>Total Monthly Income ($)</Form.Label>
-                                    <Form.Control type="text"  placeholder=" 0 0 0 0 0"  />
+                                            <Form>
+                                                <Form.Row>
+                                                    <Form.Group as={Col}>
+                                                        <Form.Label>Number of Units</Form.Label>
+                                                            <Form.Control type="text" />
+                                                        
+                                                            <Form.Label>Total Monthly Rent Income ($)</Form.Label>
+                                                            <Form.Control type="text" placeholder=" 0 0 0 0 0"  />
 
-                            </Form.Group>
+                                                            <Form.Label>Total Monthly Income ($)</Form.Label>
+                                                            <Form.Control type="text"  placeholder=" 0 0 0 0 0"  />
 
-                            <Form.Group as={Col}>
-                                <FormGroup>
-                                <Form.Label>Avarage Rent per Unit ($)</Form.Label>
-                                <Form.Control type="text" />
+                                                    </Form.Group>
 
-                                <Form.Label>Other Monthly Income ($)</Form.Label>
-                                <Form.Control type="text" />
-                                </FormGroup>
-                                
+                                                    <Form.Group as={Col}>
+                                                        <FormGroup>
+                                                        <Form.Label>Avarage Rent per Unit ($)</Form.Label>
+                                                        <Form.Control type="text" />
 
-                            </Form.Group>
-                       
-                    </Form.Row>
+                                                        <Form.Label>Other Monthly Income ($)</Form.Label>
+                                                        <Form.Control type="text" />
+                                                        </FormGroup>
+                                                        
 
-                    {/* <Form.Row>
-                        <Form.Group as={Col} controlId="formGridState">
-                            <h1> New Renovation Tab </h1>
-                            <Form.Label>Rehab Budget ($)</Form.Label>
-                            <Form.Control type="text" />
-                
-                            <Form.Label> Closing Costs ($) </Form.Label>
-                            <Form.Control type="text" />
-
-                            <Form.Label>Insurence ($)</Form.Label>
-                            <Form.Control type="text" />
-                        </Form.Group>
-                    </Form.Row> */}
-                </Form>
-            </div>  
+                                                    </Form.Group>
+                                            
+                                            </Form.Row>
+                                                </Form>
+                                            </div>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </Column>
+                        </Row>
+                    </SidebarContext>
+                    </div>
+                </div>
+            </div>
+            <Footer />
         </div>
-    </div>
+
+
     )
-}
+
 }
 
 export default Income;

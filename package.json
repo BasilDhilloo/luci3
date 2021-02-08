@@ -1,10 +1,13 @@
 {
-    "name": "react-admin-dashboard",
+    "name": "luci",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://llorentegerman.github.io/react-admin-dashboard",
+    "homepage": ".",
     "dependencies": {
+        "@material-ui/core": "^4.11.3",
+        "antd": "^4.12.2",
         "bootstrap": "^4.6.0",
+        "node-sass": "^4.14.1",
         "prop-types": "^15.7.2",
         "react": "^16.13.1",
         "react-bootstrap": "^1.4.3",
@@ -16,6 +19,7 @@
         "react-jss": "^10.4.0",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.3",
+        "react-super-responsive-table": "^5.2.0",
         "react-svg-line-chart": "^2.0.1",
         "simple-flexbox": "^2.3.1"
     },

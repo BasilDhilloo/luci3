@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider } from 'react-jss';
 import Theme from 'resources/theme';
-import Routes from 'routes';
+import Routes from 'routes/Routes';
 import './index.css';
+import 'antd/dist/antd.css';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(

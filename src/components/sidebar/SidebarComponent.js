@@ -27,6 +27,7 @@ import MenuItem from './MenuItemComponent';
 //     }
 // });
 
+
 function SidebarComponent() {
     const { push } = useHistory();
     const theme = useTheme();
@@ -48,14 +49,13 @@ function SidebarComponent() {
             </div> */}
 
             <MenuItem
-                id={SLUGS.dashboard}
-                title='Dashboard'
+                id={SLUGS.propertycontent}
+                // items={[SLUGS.overviewTwo, SLUGS.overviewThree]}
+                title='Property'
                 icon={AiFillHome}
-                onClick={() => onClick(SLUGS.dashboard)}
-            />
-            
-
-
+                onClick={() => onClick(SLUGS.propertycontent)}
+            >
+            </MenuItem>
             <MenuItem
                 id={SLUGS.purchase}
                 // items={[SLUGS.overviewTwo, SLUGS.overviewThree]}
@@ -113,7 +113,7 @@ function SidebarComponent() {
                 icon={FiFileText}
                 onClick={() => onClick(SLUGS.report)}
             />
-            <MenuItem
+            {/* <MenuItem
                 id={SLUGS.expenses}
                 title='Expenses'
                 icon={GiBattery0}
@@ -124,16 +124,9 @@ function SidebarComponent() {
                 title='Fixed Variable'
                 icon={FiLock}
                 onClick={() => onClick(SLUGS.fixedvariable)}
-            />
+            /> */}
 
-<MenuItem
-                id={SLUGS.propertycontent}
-                // items={[SLUGS.overviewTwo, SLUGS.overviewThree]}
-                title='Property'
-                icon={FiShoppingBag}
-                onClick={() => onClick(SLUGS.propertycontent)}
-            >
-            </MenuItem>
+
             {/* <div className={classes.separator}></div>
             <MenuItem
                 id={SLUGS.settings}

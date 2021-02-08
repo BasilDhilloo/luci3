@@ -9,7 +9,19 @@ export default {
     assumptions: '/assumptions',
     report: '/report',
     expenses: '/expenses',
-    fixedvariable: '/fixedvariable'
+    fixedvariable: '/fixedvariable',
+
+    // Slugs for Calculator two
+    propertycontenttwo:'/propertytwo',
+    purchasetwo:'/purchasetwo',
+    renovation: '/renovation',
+    financing: './financing',
+    incometwo: '/incometwo',
+    expensetwo: '/expensetwo',
+    expensetwofixed: '/expensetwo/fixed',
+    expensetwovariable: '/expense/variable',
+    assumptionstwo: '/assumptionstwo',
+    reporttwo: '/reporttwo'
     // overview: '/purchase',
     // overviewTwo: '/overview/two',
     // overviewThree: '/overview/three',

@@ -46,7 +46,7 @@ function Property () {
                                 <Column flexGrow={1} className={classes.mainBlock}>
                                     {/* <Header />? */}
                                     <div className={classes.contentBlock}>
-                                        <PrivateRoutes />
+                                        {/* <PrivateRoutes /> */}
                                     </div>
                                 </Column>
                             </Row>

@@ -2,7 +2,7 @@ import React from "react";
 import "./../../App.css";
 import { Nav, Navbar} from "react-bootstrap";
 // import { ReactComponent as Logo } from "./../../logo.svg";
-import styles from './header.module.css';
+import styles from './header2.module.css';
 import Logo from './../../../src/assets/Logo1.png';
 import "bootstrap/dist/css/bootstrap.min.css";
 

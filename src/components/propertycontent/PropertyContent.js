@@ -1,18 +1,56 @@
 import React, { Component } from 'react'
 import styles from './propertycontent.module.css'
 import "./propertycontent.css"
+// import './property.css'
+import './../../App.css'
+import Header from 'components/header2/Header'
+import Footer from 'components/footer/Footer'
+import { createUseStyles, useTheme } from 'react-jss';
+import { Column, Row } from 'simple-flexbox';
+import { SidebarComponent, SidebarContext } from 'components/sidebar';
 import imagetest from './../../assets/calimage.png'
 // import calIMage from './../../../assets/calimage.png'
 import {Form, FormControl, FormGroup, ControlLabel, HelpBlock, Checkbox, Radio, Button, Col, Image, Card} from 'react-bootstrap';
 import ImageUpload from './ImageUpload';
 
 
+const useStyles = createUseStyles({
+    container: {
+        height: '100%',
+        minHeight: 850
+    },
+    mainBlock: {
+        marginLeft: 255,
+        padding: 30,
+        '@media (max-width: 900px)': {
+            marginLeft: 0
+        }
+    },
+    contentBlock: {
+        marginTop: 54
+    }
+});
 
-class PropertyContent extends Component {
-    
 
-    render() {
+function PropertyContent (){
+    const theme = useTheme();
+    const classes = useStyles({ theme });
+
         return (
+            <div className="App">
+            <Header />
+            {/* <div className={styles.propertyLayoutMain}> */}
+                <div className={styles.propertyLayoutSecond}>
+                    <div className={styles.propertyLayoutSider}>
+                    {/* <h1> This is property compenent</h1> */}
+                    <SidebarContext>
+                        <Row className={classes.container}>
+                        <SidebarComponent />
+                            <Column flexGrow={1} className={classes.mainBlock}>
+                                {/* <Header />? */}
+                                <div className={classes.contentBlock}>
+                                    {/* <PrivateRoutes /> */}
+                                    
             <div>
                 <div className="flex-container">
                     <div className="flex-child">
@@ -189,8 +227,19 @@ class PropertyContent extends Component {
 
                 </div>
             </div>
+                                </div>
+                            </Column>
+                        </Row>
+                    </SidebarContext>
+                    </div>
+                {/* </div> */}
+            </div>
+            <Footer />
+        </div>
+
+
         )
-    }
+    
 }
 
 export default PropertyContent;

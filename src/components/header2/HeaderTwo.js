@@ -1,4 +1,4 @@
-import styles from './header.module.css';
+import styles from './header2.module.css';
 import Logo from './../../../src/assets/Logo1.png';
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";

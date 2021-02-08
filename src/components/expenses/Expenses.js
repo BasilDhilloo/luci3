@@ -2,32 +2,48 @@ import React, { Component } from 'react'
 import styles from './expenses.module.css'
 import "./expenses.css"
 // import calIMage from './../../../assets/calimage.png'
+import { createUseStyles, useTheme } from 'react-jss';
+import { SidebarComponent, SidebarContext } from 'components/sidebar';
+
+import { Column, Row } from 'simple-flexbox';
+
 import {Form, FormControl, FormGroup, ControlLabel, HelpBlock, Checkbox, Radio, Button, Col, Image} from 'react-bootstrap';
+import { func } from 'prop-types';
 
-
-
-class Expenses extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            image: null
-        };
-
-        this.onImageChange = this.onImageChange.bind(this);
-    }
-
-    onImageChange = event => {
-        if (event.target.files && event.target.files[0]) {
-          let img = event.target.files[0];
-          this.setState({
-            image: URL.createObjectURL(img)
-          });
+const useStyles = createUseStyles({
+    container: {
+        height: '100%',
+        minHeight: 850
+    },
+    mainBlock: {
+        marginLeft: 255,
+        padding: 30,
+        '@media (max-width: 900px)': {
+            marginLeft: 0
         }
-      };
+    },
+    contentBlock: {
+        marginTop: 54
+    }
+});
 
 
-    render() {
+function Expenses(){
+    const theme = useTheme();
+    const classes = useStyles({ theme });
         return (
+            <div className="App">
+            {/* <Header /> */}
+            <div className="property-layout-main">
+                <div className="property-layout-second">
+                    <div className="property-layout-sider">
+                    {/* <h1> This is property compenent</h1> */}
+                    <SidebarContext>
+                        <Row className={classes.container}>
+                        <SidebarComponent />
+                            <Column flexGrow={1} className={classes.mainBlock}>
+                                {/* <Header />? */}
+                                <div className={classes.contentBlock}>
             <div>
                 <div className="flex-container">
                     <div className="flex-child">
@@ -97,8 +113,17 @@ class Expenses extends Component {
             </div>  
         </div>
     </div>
+
+    </div>
+                                    </Column>
+                                </Row>
+                            </SidebarContext>
+                            </div>
+                        </div>
+                    </div>
+                    {/* <Footer /> */}
+                </div>
     )
-}
 }
 
 export default Expenses;
