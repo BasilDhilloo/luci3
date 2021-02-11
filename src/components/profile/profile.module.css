@@ -1,0 +1,235 @@
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1919px) {
+
+
+    .flexContainer {
+        display: flex;
+        flex-direction: row;
+        /*flex-wrap: wrap;*/
+        align-content: center;
+    }
+
+    .profileImage {
+        width: 300px;
+        height: auto;
+        /*margin-right: 300px;*/
+        margin-left: 200px;
+
+
+    }
+
+    .flexChild {
+        flex: 100%;
+        /*flex-direction: column;*/
+        color: #4B176A;
+
+        max-width: 80%;
+        /*margin-left: 80px;*/
+        /*align-content: center;*/
+
+    }
+
+    .flexChild2 {
+        flex: 100%;
+        /*flex-direction: column;*/
+        color: #4B176A;
+
+        max-width: 80%;
+        margin-left: 0px;
+        /*margin-left: 80px;*/
+        /*align-content: center;*/
+    }
+
+    .headingTextSize {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+        color: #4B176A;
+    }
+
+    .paragraphTextSize {
+
+        text-align:left;
+        font-size: 18px;
+        color: #4B176A;
+        max-width: 80%;
+    }
+
+    .flex_input {
+        height: 40px;
+        max-width: 70%;
+        /*margin-bottom: 15px;*/
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) ipad pro */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+
+    .flexContainer {
+        display: flex;
+        flex-direction: row;
+        /*flex-wrap: wrap;*/
+        align-content: center;
+    }
+
+    .profileImage {
+        width: 300px;
+        height: auto;
+        /*margin-right: 300px;*/
+        margin-left: 130px;
+
+
+    }
+
+    .flexChild {
+        flex: 100%;
+        /*flex-direction: column;*/
+        color: #4B176A;
+
+        max-width: 80%;
+        /*margin-left: 80px;*/
+        /*align-content: center;*/
+
+    }
+
+    .flexChild2 {
+        flex: 100%;
+        /*flex-direction: column;*/
+        color: #4B176A;
+
+        max-width: 80%;
+        margin-left: 0px;
+        /*margin-left: 80px;*/
+        /*align-content: center;*/
+    }
+
+    .headingTextSize {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: left;
+        color: #4B176A;
+    }
+
+    .paragraphTextSize {
+
+        text-align:left;
+        font-size: 17px;
+        color: #4B176A;
+        max-width: 80%;
+    }
+
+    .flex_input {
+        height: 40px;
+        max-width: 70%;
+        /*margin-bottom: 15px;*/
+    }
+
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .profileImage {
+        width: 200px;
+        height: auto;
+        /*margin-right: 300px;*/
+        margin-left: 200px;
+
+
+    }
+
+    .flexChild {
+        /*flex: 100%;*/
+        flex-direction: column;
+        color: #4B176A;
+
+        /*max-width: 80%;*/
+        /*align-content: center;*/
+
+    }
+
+    .headingTextSize {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: left;
+        color: #4B176A;
+    }
+
+    .paragraphTextSize {
+
+        text-align:left;
+        font-size: 13px;
+        color: #4B176A;
+    }
+
+    .flex_input {
+        height: 40px;
+        /*margin-bottom: 15px;*/
+    }
+
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    .flexContainer {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .profileImage {
+        width: 150px;
+        height: auto;
+        /*margin-right: 300px;*/
+        margin-left: 65px;
+
+
+    }
+
+    .flexChild {
+        /*flex: 100%;*/
+        flex-direction: column;
+        color: #4B176A;
+
+        /*max-width: 80%;*/
+        /*align-content: center;*/
+
+    }
+
+    .headingTextSize {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: left;
+        color: #4B176A;
+    }
+
+    .paragraphTextSize {
+
+        text-align:left;
+        font-size: 13px;
+        color: #4B176A;
+    }
+
+    .flex_input {
+        height: 40px;
+        /*margin-bottom: 15px;*/
+    }
+
+
+}

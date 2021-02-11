@@ -14,6 +14,7 @@
         "react-burger-menu": "^2.6.13",
         "react-collapsible-content": "^1.0.0",
         "react-dom": "^16.8.6",
+        "react-helmet": "^6.1.0",
         "react-icons": "^4.1.0",
         "react-images-upload": "^1.2.8",
         "react-jss": "^10.4.0",

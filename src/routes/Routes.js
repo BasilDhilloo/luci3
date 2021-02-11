@@ -16,6 +16,12 @@ import Report from './../components/report/Report'
 import Expenses from './../components/expenses/Expenses'
 import FixedVariable from './../components/fixedvariable/FixedVariable'
 import Home from 'components/home/Home';
+import Contact from "../components/contact/Contact";
+import Profile from "../components/profile/Profile";
+import PaymentDetails from "../components/payment_details/PaymentDetails";
+import AdminLogin from "../components/admin_login/AdminLogin";
+import PendingUsers from "../components/pending_users/PendingUsers";
+import FAQs from "../components/faqs/FAQs";
 
 //Imports of Second Calculator 
 import PropertyContentTwo from './../components/propertycontent2/PropertyContentTwo'
@@ -59,6 +65,18 @@ function Routes() {
                     <Route exact path={"/expensetwo"} component={ExpenseTwo} />
                     <Route exact path={"/assumptionstwo"} component={AssumptionsTwo} />
                     <Route exact path={"/reporttwo"} component={ReportTwo} />
+
+                    <Route exact path={"/contact_us"} component={Contact} />
+                    <Route exact path={"/profile"} component={Profile} />
+                    <Route exact path={"/payment_details"} component={PaymentDetails} />
+
+                    <Route exact path={"/admin_login"} component={AdminLogin} />
+                    <Route exact path={"/faqs"} component={FAQs} />
+                    <Route exact path={"/pending_users"} component={PendingUsers} />
+                    {/*<Route exact path={"/chat"} component={ChatMenu} />*/}
+
+
+
                 </Switch>
             </BrowserRouter>
         </div>
