@@ -71,7 +71,11 @@
 
 .flexChild {
     /*max-width: 70%;*/
-    margin-left: 180px;
+    margin-left: 220px;
+}
+
+.flexChild2 {
+    margin-left: 100px;
 }
 
 .flex_input {
@@ -93,11 +97,11 @@
 .otherChild button {
 
     position: absolute;
-    margin-left: 290px;
+    margin-left: 320px;
     background: #4B176A;
     border-radius: 10px;
     height: 86px;
-    width: 62%;
+    width: 59%;
     font-family: "Montserrat";
     font-style: normal;
     font-weight: bold;
@@ -187,7 +191,11 @@
         /*align-content: center;*/
         /*flex-direction: column;*/
         /*max-width: 40%;*/
-        margin-left: 40px;
+        margin-left: 5px;
+    }
+
+    .flexChild2 {
+        margin-left: 80px;
     }
 
     .flex_input {
@@ -202,12 +210,12 @@
     .otherChild {
         width: 100%;
         height: 130px;
-        padding: .5rem;
+        /*padding: .5rem;*/
     }
 
     .otherChild button {
         position: absolute;
-        margin-left: 55px;
+        margin-left: 80px;
         background: #4B176A;
         border-radius: 10px;
         height: 86px;
@@ -278,10 +286,10 @@
 
         /*display: none;*/
 
-        margin-left: 0;
+        margin-left: 0px;
         background: white;
-        width: 800px;
-        height: 500px;
+        width: auto;
+        height: auto;
 
     }
 
@@ -290,17 +298,23 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        align-content: center;
-
+        justify-content: center;
     }
 
     .flexChild {
         /*display: flex;*/
-        flex: 100%;
-        align-content: center;
+        /*flex: 100%;*/
+        justify-content: center;
         flex-direction: column;
-        max-width: 80%;
+        width: 60%;
         margin-top: 30px;
+        margin-left: 230px;
+    }
+    .flexChild2 {
+        margin-top: 35px;
+        margin-left: 160px;
+        width: 75%;
+        /*margin-left: 80px;*/
     }
 
     .flex_input {
@@ -311,16 +325,16 @@
     .otherChild {
         width: 100%;
         height: 130px;
-        padding: .5rem;
+        /*padding: .5rem;*/
     }
 
     .otherChild button {
         margin-top: 25px;
-        margin-left: 40px;
+        margin-left: 130px;
         background: #4B176A;
         border-radius: 10px;
         height: 52px;
-        width: 90%;
+        width: 79%;
         font-family: "Montserrat";
         font-style: normal;
         font-weight: bold;
@@ -361,7 +375,7 @@
     }
 
     .container {
-        margin-left: 70px;
+        margin-left: 55px;
     }
 
     .contianerImg {
@@ -390,8 +404,10 @@
 
         margin-left: 0;
         background: white;
-        width: 620px;
-        height: 400px;
+        width: auto;
+        height: auto;
+        /*width: 620px;*/
+        /*height: 400px;*/
 
     }
 
@@ -400,17 +416,24 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        align-content: center;
-
+        justify-content: center;
     }
 
     .flexChild {
         /*display: flex;*/
-        flex: 100%;
-        align-content: center;
+        /*flex: 100%;*/
+        justify-content: center;
         flex-direction: column;
         max-width: 80%;
         margin-top: 30px;
+        margin-left: 70px;
+    }
+
+    .flexChild2 {
+        margin-top: 35px;
+        margin-left: 70px;
+        width: 80%;
+        /*margin-left: 80px;*/
     }
 
     .flex_input {
@@ -429,7 +452,7 @@
     .otherChild {
         width: 100%;
         height: 130px;
-        padding: .5rem;
+        /*padding: .5rem;*/
     }
 
     .otherChild button {
@@ -438,7 +461,7 @@
         background: #4B176A;
         border-radius: 10px;
         height: 52px;
-        width: 90%;
+        width: 85%;
         font-family: "Montserrat";
         font-style: normal;
         font-weight: bold;
@@ -489,7 +512,7 @@
 @media only screen and (max-width: 600px) {
     .coverHeadingText {
 
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold;
         font-family: Roboto;
         transform: translate(-50%, -50%);
@@ -502,16 +525,19 @@
     .coverParagraphText {
 
         /*color: green;*/
-        font-size: 4px;
+        font-size: 3px;
         font-family: Roboto;
         transform: translate(-50%, -50%);
-        top: 70%;
+        top: 75%;
         left: 50%;
         position: absolute;
     }
+    .container {
+        margin-left: 5px;
+    }
 
     .contianerImg {
-        width: auto;
+        width: 30px;
         height: 30px;
     }
 
@@ -519,14 +545,15 @@
         font-size: 10px;
         font-weight: bold;
         color: #4B176A;
-        margin-left: 2px;
+        margin-left: 5px;
     }
 
     .containerP {
-        font-size: 2px;
+        display: none;
+        font-size: 3px;
         line-height: 0.1px;
         color: #4B176A;
-        margin-left: 2px;
+        margin-left: 5px;
 
     }
 
@@ -549,17 +576,33 @@
 
     }
 
-    .flexChild {
-        /*display: flex;*/
-        flex: 100%;
-        align-content: center;
-        flex-direction: column;
-        max-width: 80%;
-        margin-top: 30px;
-    }
+    /*.flexChild {*/
+    /*    !*display: flex;*!*/
+    /*    flex: 100%;*/
+    /*    align-content: center;*/
+    /*    flex-direction: column;*/
+    /*    max-width: 80%;*/
+    /*    margin-top: 30px;*/
+    /*}*/
 
     .flex_input {
         height: 40px;
+    }
+
+    .flexChild {
+        /*display: flex;*/
+        /*flex: 100%;*/
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        margin-top: 30px;
+        margin-left: 0px;
+    }
+    .flexChild2 {
+        margin-top: 35px;
+        /*margin-left: 160px;*/
+        width: 80%;
+        margin-left: 1px;
     }
 
     /*.flexChild > .row {*/
@@ -587,12 +630,12 @@
     .otherChild {
         width: 100%;
         height: 130px;
-        padding: .5rem;
+        /*padding: .5rem;*/
     }
 
     .otherChild button {
         margin-top: 10px;
-        margin-left: 15px;
+        margin-left: 9px;
         background: #4B176A;
         border-radius: 10px;
         height: 52px;

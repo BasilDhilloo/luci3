@@ -41,34 +41,31 @@ class Contact extends Component {
 
         <div className={styles.container} style={{marginBottom: '0px'}}>
           <div className="row" style={{marginLeft: '7px'}}>
-            <div className={"col-4"} style={{display: '-webkit-box'}}>
+
+            <div className={"col"} style={{display: '-webkit-box'}}>
 
               <img className={styles.contianerImg} src={phoneImage}/>
               <div className={"row"}>
-                <h5 className={styles.containerH1}> Phone Number</h5>
+                <h5 className={styles.containerH1}>Phone Number</h5>
                 <p className={styles.containerP}>0000 0000 00</p>
 
               </div>
 
-
-
-
-
             </div>
 
-            <div className={"col-4"} style={{display: '-webkit-box'}}>
+            <div className={"col"} style={{display: '-webkit-box'}}>
               <img className={styles.contianerImg} src={emailImage}/>
               <div className={"row"}>
-                <h5 className={styles.containerH1}> Email Address</h5>
+                <h5 className={styles.containerH1}>Email Address</h5>
                 <p className={styles.containerP}>Loremipsum@gmail.com</p>
               </div>
 
             </div>
 
-            <div className={"col-4"} style={{display: '-webkit-box'}}>
+            <div className={"col"} style={{display: '-webkit-box'}}>
               <img className={styles.contianerImg} src={phoneImage}/>
               <div className={"row"}>
-                <h5 className={styles.containerH1}> Location</h5>
+                <h5 className={styles.containerH1}>Location</h5>
                 <p className={styles.containerP}>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
 
               </div>
@@ -81,12 +78,13 @@ class Contact extends Component {
         <br/>
 
         <div className={styles.flexContainer}>
+
           <div className={styles.flexChild} style={{marginTop: '0px'}}>
             <img className={styles.bodyImage} src={bodyImage}/>
           </div>
 
 
-          <div className={styles.flexChild}>
+          <div className={styles.flexChild2}>
 
             <div className="row">
               <label>Your Name</label>

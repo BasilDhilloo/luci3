@@ -22,6 +22,7 @@ import PaymentDetails from "../components/payment_details/PaymentDetails";
 import AdminLogin from "../components/admin_login/AdminLogin";
 import PendingUsers from "../components/pending_users/PendingUsers";
 import FAQs from "../components/faqs/FAQs";
+import ChatMenu from "../components/chat_menu/ChatMenu";
 
 //Imports of Second Calculator 
 import PropertyContentTwo from './../components/propertycontent2/PropertyContentTwo'
@@ -73,7 +74,7 @@ function Routes() {
                     <Route exact path={"/admin_login"} component={AdminLogin} />
                     <Route exact path={"/faqs"} component={FAQs} />
                     <Route exact path={"/pending_users"} component={PendingUsers} />
-                    {/*<Route exact path={"/chat"} component={ChatMenu} />*/}
+                    <Route exact path={"/chat"} component={ChatMenu} />
 
 
 

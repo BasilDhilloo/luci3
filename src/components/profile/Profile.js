@@ -2,11 +2,9 @@ import React, {Component} from 'react'
 import Header from '../header2/Header'
 import Footer from "../footer/Footer";
 import 'antd/dist/antd.css';
-import {Layout} from "antd";
 import ProfileImage from '../../assets/profile_image.png'
 import specificStyles from "./property.module.css";
 import styles from './profile.module.css'
-const {Content} = Layout;
 
 class Profile extends Component
 {
@@ -22,7 +20,7 @@ class Profile extends Component
         </div>
 
         <div className={styles.flexContainer}>
-          <div className={styles.flexChild} style={{marginTop:'50px' /*margin-left: 350px;*/}}>
+          <div className={styles.flexChild} /*style={{marginTop:'50px' margin-left: 350px;}} */>
             <img className={styles.profileImage} src={ProfileImage}/>
           </div>
 
