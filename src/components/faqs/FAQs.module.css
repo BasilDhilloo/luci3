@@ -3,6 +3,9 @@
     margin-bottom: 50px;
 }
 
+.flexChild {
+    margin-left: 120px;
+}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) and (max-width: 1919px) {

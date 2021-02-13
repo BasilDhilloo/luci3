@@ -1,9 +1,12 @@
 .flexContainer {
     display: flex;
+    margin-bottom: 35px;
 }
 
 .flexChild {
+    margin-top: 25px;
     margin-left: 20px;
+    width: 95%;
 
 }
 .flexChild2 {
