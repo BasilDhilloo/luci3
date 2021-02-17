@@ -10,6 +10,14 @@
     border-right: 1px solid #ddd;
 }
 
+.inbox_people_c2 {
+    background: #fff;
+    float: left;
+    overflow: hidden;
+    width: 100%;
+    border-right: 1px solid #ddd;
+}
+
 .inbox_msg {
     border: 0px solid #ddd;
     border-radius: 5px;
@@ -250,7 +258,19 @@
 
     width:70%;
     background: #F1F1F1;
+    height: 650px;
     /*margin-bottom: 0px;*/
+
+}
+
+.mesgs_c2{
+    /*float: left;*/
+
+
+
+    width:100%;
+    background: #F1F1F1;
+
 
 }
 
@@ -298,6 +318,7 @@
     border-top: 0px solid #c4c4c4;
     position: relative;
 }
+
 
 .msg_send_btn {
     background: #ffffff none repeat scroll 0 0;
@@ -355,5 +376,14 @@
 }
 
 .title_msg_img img {
+    width: 70%;
+}
+
+.title_msg_img_c2 {
+    display: inline-block;
+    width: 10%;
+}
+
+.title_msg_img_c2 img {
     width: 70%;
 }
