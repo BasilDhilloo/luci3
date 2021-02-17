@@ -1,0 +1,5 @@
+
+.ant-collapse > .ant-collapse-item > .ant-collapse-header:focus {
+    color: #4B176A;
+}
+

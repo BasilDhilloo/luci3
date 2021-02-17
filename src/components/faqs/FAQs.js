@@ -5,8 +5,15 @@ import 'antd/dist/antd.css';
 import {withRouter} from 'react-router-dom';
 import styles from './FAQs.module.css'
 import Helmet from 'react-helmet'
+import './myCollapse.css'
+import Circle from '../../assets/circle.png'
+import MiddleLine from '../../assets/faqs_line.png'
+import {Collapse} from 'antd';
 
-class FAQs extends Component{
+const {Panel} = Collapse;
+
+
+class FAQs extends Component {
   render() {
 
     return (
@@ -19,20 +26,111 @@ class FAQs extends Component{
         </Helmet>
 
         <HeaderTwo/>
-        <h5 style={{ textAlign: 'center', fontWeight:'bold', color:'#4B176A', letterSpacing: '10px'}}>FREQUENTLY ASKED QUESTIONS</h5>
-        <h6 style={{textAlign: 'center', color:'#4B176A'}}>Need help?</h6>
 
-        <div className={styles.flexContainer}>
-          <div className={styles.flexChild}>
-            <div className="form-group">
-              {/*<label htmlFor="usr">Name:</label>*/}
-              <input type="text" className="form-control" id="usr" style={{borderRadius: '25px', width:'500px'}} placeholder={"Lorem ipsum dolor sit amet ?"}/>
-            </div>
+        <div className={styles.mainDiv}>
+          <div style={{textAlign: 'center', color: '#4B176A', marginTop: '10px'}}>
+            <h5 style={{fontWeight: 'bold', letterSpacing: '10px'}}>FREQUENTLY ASKED
+              QUESTIONS</h5>
+            <h6>Need help?</h6>
           </div>
 
-          <div className={styles.flexChild}></div>
-        </div>
 
+          <div className={styles.flexContainer}>
+            <div className={styles.flexChild}>
+
+
+              <Collapse bordered={false} accordion className={styles.collapseWidth}>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="1"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="2"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="3"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="4"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="5"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+              </Collapse>
+
+
+            </div>
+
+
+            <div className={styles.flexChild2}>
+
+              <img className={styles.lineScalling} src={MiddleLine}/>
+
+            </div>
+
+            <div className={styles.flexChild2}>
+
+
+              <Collapse bordered={false} accordion className={styles.collapseWidth}>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="1"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="2"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="3"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="4"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+                <Panel header="Lorem ipsum dolor sit amet ?" key="5"
+                       style={{borderRadius: '30px', maxWidth: '100%', boxShadow: '0px 3px 9px rgba(0, 0, 0, 0.25)'}}>
+                  <p className={styles.paragraphTextPadding}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent consectetur ornare urna ut
+                    euismod.
+                    Aenean et erat a felis vestibulum gravida.</p>
+                </Panel>
+                <br/>
+              </Collapse>
+
+            </div>
+          </div>
+        </div>
 
 
         <Footer/>
