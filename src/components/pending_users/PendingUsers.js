@@ -17,6 +17,7 @@ class PendingUsers extends Component{
       <div style={{background: 'white', color: '4B176A' /*, height:'auto'*/}}>
         <HeaderTwo/>
 
+
         <h5 style={{ textAlign: 'center', fontWeight:'bold', color:'#4B176A'}}>Pending Users</h5>
 
         <div className={styles.flexContainer}>
@@ -37,7 +38,6 @@ class PendingUsers extends Component{
 
 
           <div className={styles.flexChild}>
-            {/*<h5>6 Pending Users</h5>*/}
 
             <div className={"col"} style={{display: '-webkit-box', marginBottom: '35px'}}>
               <img src={UserIcon} className={styles.userIcon}/>

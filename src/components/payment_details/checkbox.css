@@ -1,3 +1,14 @@
+.form-check-input:checked[type=checkbox] {
+    background-image: none;
+}
+
+.form-check-input:checked {
+    background: #4B176A;
+    border-color: #4B176A;
+}
+
+
+
 .checkbox_container {
     display: block;
     position: relative;

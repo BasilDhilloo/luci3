@@ -26,20 +26,20 @@ class AdminLogin extends Component {
           <div className={styles.flexChild2}>
             <div className={"row"}>
               <label>User Name</label>
-              <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} />
+              <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{borderColor: 'currentColor'}} />
             </div>
             <br/>
 
             <div className={"row"}>
               <label>Password</label>
-              <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} />
+              <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{borderColor: 'currentColor'}} />
             </div>
 
             <br/>
             <br/>
             <br/>
             <div className={"row"}>
-              <button className={"flexbutton"} style={{width: '100%', height:'50px', fontWeight: 'bold', borderRadius:'15px', background:'#4B176A' , color:'white'}}>Log in</button>
+              <button className={"flexbutton"} style={{width: '100%', height:'50px', fontWeight: 'bold', borderRadius:'15px', background:'#4B176A' , color:'white', borderColor: 'currentColor'}}>Log in</button>
             </div>
 
 

@@ -39,8 +39,6 @@ class ChatMenu extends Component {
         <div className={flex_styles.flexContainer}>
 
           <div className={flex_styles.flexChild}>
-            {/*<h3 style={{fontWeight: 'bold', color: '#4B176A'}}>Messages</h3>*/}
-            {/*<br/>*/}
 
             <div className={styles.messaging}>
               <div className={styles.inbox_msg}>

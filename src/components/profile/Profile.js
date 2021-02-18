@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Header from '../header2/Header'
 import Footer from "../footer/Footer";
 import 'antd/dist/antd.css';
-import ProfileImage from '../../assets/profile_image.png'
+import ProfileImage from '../../assets/profile_image_with_camera_icon.png'
 import specificStyles from "./property.module.css";
 import styles from './profile.module.css'
 
@@ -37,28 +37,28 @@ class Profile extends Component
               <label>Phone Number</label>
               <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
 
             <div className={"row"}>
               <label>Address</label>
               <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
 
             <div className={"row"}>
               <label>Gender</label>
               <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
 
             <div className={"row"}>
               <label>Nationality</label>
               <input list="nationality" id={specificStyles.inputIcon} className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
               <datalist id={"nationality"}>
                 <option value={"value1"}/>
                 <option value={"value2"}/>
@@ -70,7 +70,7 @@ class Profile extends Component
               <label>Password</label>
               <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
           </div>
         </div>

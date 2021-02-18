@@ -6,6 +6,7 @@ import {Layout} from "antd";
 import BodyImage from '../../assets/payment_details_body_image.png'
 import {Helmet} from "react-helmet";
 import styles from './payment_details.module.css'
+import './checkbox.css'
 
 const {Content} = Layout;
 
@@ -45,7 +46,7 @@ class PaymentDetails extends Component{
               <label>Name Of Card</label>
               <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
             <br/>
 
@@ -54,7 +55,7 @@ class PaymentDetails extends Component{
               <label>Card Number</label>
               <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
             <br/>
 
@@ -63,7 +64,7 @@ class PaymentDetails extends Component{
               <label>Valid Through</label>
               <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
 
             <br/>
@@ -73,7 +74,7 @@ class PaymentDetails extends Component{
               <label>CVV</label>
               <input type="text" id={"name"} className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
             <br/>
             <br/>
@@ -81,25 +82,27 @@ class PaymentDetails extends Component{
             <h6 style={{fontSize:'25px', fontWeight:'bold', textAlign:'left'}}>Choose Type Of Plan</h6>
             <br/>
 
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>
+              <label className="form-check-label" htmlFor="flexCheckDefault">
+                $50/Month
+              </label>
+            </div>
+            <br/>
+            <div className="form-check">
+              <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked/>
+              <label className="form-check-label" htmlFor="flexCheckChecked">
+                $550/Year
+              </label>
+            </div>
 
-
-
-            {/*<div>*/}
-            {/*  <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault"/>*/}
-            {/*  <label className="form-check-label" htmlFor="flexCheckDefault">Default checkbox</label>*/}
-            {/*</div>*/}
-
-            {/*<label className="checkbox_container">One*/}
-            {/*  <input type="checkbox" checked=""/>*/}
-            {/*  <span className="checkmark"></span>*/}
-            {/*</label>*/}
 
 
             <br/>
             <br/>
             <br/>
             <div className={styles.otherChild}>
-              <button className={"flexbutton"} /*style={{width: '85%', height:'86px', fontWeight: 'bold', borderRadius:'20px'}}*/>PAY</button>
+              <button className={"flexbutton"} style={{borderColor: 'currentColor'}} /*style={{width: '85%', height:'86px', fontWeight: 'bold', borderRadius:'20px'}}*/>PAY</button>
             </div>
 
 

@@ -90,7 +90,7 @@ class Contact extends Component {
               <label>Your Name</label>
               <input className={styles.flex_input} type="text" id={"name"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
 
 
@@ -98,14 +98,14 @@ class Contact extends Component {
               <label>Your Email</label>
               <input className={styles.flex_input} type="text" id={"email"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
 
             <div className="row">
               <label>Write A Subject</label>
               <input className={styles.flex_input} type="text" id={"subject"} style={{background: 'rgba(0, 0, 0, 0.1)',
                 color: 'black',
-                borderRadius: '10px', marginBottom: '10px'}}/>
+                borderRadius: '10px', marginBottom: '10px', borderColor: 'currentColor'}}/>
             </div>
 
             <div className="row">
