@@ -1,0 +1,26 @@
+.headnavbar{
+	border-radius: 0;
+	border: none;
+	margin-bottom: 0;
+	min-height: 80px;
+	background-color:white;
+}
+
+
+.headlinkText{
+	color: #4B176A;
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.headnavbarButton{
+	background-color: grey;
+}
+
+
+h4{
+	text-align: right;
+    margin-right: 15px;	
+}
