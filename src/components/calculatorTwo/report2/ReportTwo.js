@@ -7,7 +7,7 @@ import { createUseStyles, useTheme } from 'react-jss';
 import { SidebarComponent, SidebarContext } from 'components/sidebar';
 import { Grid } from "@material-ui/core";
 import Pdf from "react-to-pdf";
-import {Form, FormControl, FormGroup, ControlLabel, HelpBlock, Checkbox, Radio, Button, Col, Image} from 'react-bootstrap';
+import {Form, FormGroup, Col} from 'react-bootstrap';
 
 const ref = React.createRef();
 const useStyles = createUseStyles({

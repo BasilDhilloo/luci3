@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './income.module.css'
 import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
@@ -39,6 +39,27 @@ function Income(){
     const theme = useTheme();
     const classes = useStyles({ theme });
 
+    const [incomeProp, setIncomeProp] = useState({
+        totalRent: "",
+        otherIncome: ""
+    });
+
+    const [totalIncome, setTotalIncome] = useState();
+
+    useEffect(() => {
+        function sum( obj ) {
+            var sum = 0 ;
+            for(var el in obj) {
+                sum += obj[el]==""?0:parseFloat(obj[el]);
+            }
+            return sum;
+          }
+
+          var summed = sum(incomeProp);
+          setTotalIncome(summed)
+   
+      }, [incomeProp]);
+
         return (
             <Grid container xl={12} lg={12} md={12} sm={12} xs={12}   direction="column"  justify="space-around"  style={{backgroundColor:"#e5e5e5"}}>
                 <Grid item>
@@ -59,22 +80,25 @@ function Income(){
                                                     <Form.Group as={Col}>
                                                             <Form.Label>Number Of Units</Form.Label>
                                                             <Form.Control className={classes.input} type="text" />
-                                                        
-                                                            <Form.Label>Total Monthly Rent Income ($)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" placeholder=" 0 0 0 0 0"/>
 
-                                                            <Form.Label>Total Monthly Income ($)</Form.Label>
+                                                            <Form.Label> Average Rent ($) </Form.Label>
                                                             <Form.Control className={classes.input} type="number" placeholder=" 0 0 0 0 0" />
+                                                        
+                                                            <Form.Label>Total Rent ($)</Form.Label>
+                                                            <Form.Control className={classes.input} type="number" placeholder=" 0 0 0 0 0"
+                                                            onChange={e => setIncomeProp({...incomeProp, totalRent : e.target.value})}/>       
 
                                                     </Form.Group>
 
                                                     <Form.Group as={Col}>
                                                         <FormGroup>
-                                                            <Form.Label>Average Rent per Unit ($)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" />
+                                                            <Form.Label>Other Income</Form.Label>
+                                                            <Form.Control className={classes.input} type="number"
+                                                            onChange={e => setIncomeProp({...incomeProp, otherIncome : e.target.value})} />
         
-                                                            <Form.Label>Other Monthly Income ($)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" />
+                                                            <Form.Label>Total Income ($)</Form.Label>
+                                                            <Form.Control className={classes.input} type="number"
+                                                            value = {totalIncome} />
 
                                                         </FormGroup>
                                                        

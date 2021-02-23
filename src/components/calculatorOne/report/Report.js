@@ -48,7 +48,7 @@ function Report() {
                                                 <label> Attach Rent Report  </label>
                                                 <br></br> <br></br><br></br>
                                                 <Pdf targetRef={ref} filename="code-example.pdf">
-                                                    {({ toPdf }) => <button onClick={toPdf}>Generate Report</button>}
+                                                    {({ toPdf }) => <button className="buttonclass" onClick={toPdf}>Generate Report</button>}
                                                 </Pdf>
                                             </FormGroup>
                                         </Form.Group>

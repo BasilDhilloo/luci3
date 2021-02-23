@@ -1,11 +1,14 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import styles from './financing.module.css'
 import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
 import { createUseStyles, useTheme } from 'react-jss';
 import { SidebarComponent, SidebarContext } from 'components/sidebar';
-import {Form, Col} from 'react-bootstrap';
+import {Form, Col, FormGroup} from 'react-bootstrap';
 import { Grid } from "@material-ui/core"
+import MenuItem from '@material-ui/core/MenuItem';
+import Select from '@material-ui/core/Select';
+
 
 
 const useStyles = createUseStyles({
@@ -27,16 +30,79 @@ const useStyles = createUseStyles({
     margins:{
         marginTop:"10px",
         marginLeft: "15px"
-    }
+    },
+    inputone: {
+        height: "45px",
+        width: "55px",
+        borderRadius: 4,
+        position: 'relative',
+        backgroundColor: "rgba(128, 0, 128, 0.1)",
+        border: '1px solid #ced4da',
+        fontSize: 16,
+        marginLeft:"35%",
+        // padding: '10px 26px 10px 10px',
+        // transition: theme.transitions.create(['border-color', 'box-shadow']),
+        // Use the system font instead of the default Roboto font.
+        fontFamily: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(','),
+        '&:focus': {
+          borderRadius: 4,
+          borderColor: '#80bdff',
+        //   // boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+        },
+      }
 });
 
 
 
-function NewRenovationTab (){
+const FinancingOne = (props) => {
     const otherWay = {height:"100vh"}
     const styleOther = {position: "fixed"}
     const theme = useTheme();
     const classes = useStyles({ theme });
+
+    // const [fianTotal, setrenoTotal] = useState()
+    const [financProp, setFinanceProp] = useState({
+        fundingRenovation: "",
+        downpaymentPercentage: "",
+        downpaymentAmount: "",
+        InterestRate: "",
+        term: "",
+        loanFees: "",
+        loanPoints: "",
+        InterestOnlyPayments: "",
+        gracePeriod: "",
+        totalMonths: ""
+        });
+
+    
+
+    const [loanAmount, setLoanAmount] = useState()
+
+        //The following is the function for the calculation of loan Amount 
+    const handleChange = (event) => {
+        if(event.target.value){
+            // setLoanAmount(offerPrice - downpaymentAmount + renoTotal);
+            setLoanAmount(100)
+        }else {
+            // setLoanAmount(offerPrice - downpaymentAmount);
+            setLoanAmount(50)
+        }
+    };
+
+
+
+
 
         return (
             <Grid container xl={12} lg={12} md={12} sm={12} xs={12}   direction="column"  justify="space-around"  style={{backgroundColor:"#e5e5e5"}}>
@@ -63,42 +129,81 @@ function NewRenovationTab (){
                                     
                                 </Form.Group>
                             </Form.Row>
+                            <Form.Row>
+                                <Form.Group as={Col} style={{display:"inline-flex"}} >          
+                                    <Form.Label >Funding Renovation</Form.Label>
+                                        <Select
+                                            onChange={handleChange}
+                                                className={classes.inputone}
+                                                
+                                                >
+                                                <MenuItem value={true}>Yes</MenuItem>
+                                                <MenuItem value={false}>No</MenuItem>
+                                                </Select>
+                                        </Form.Group> <Form.Group as={Col}></Form.Group>
+                                    </Form.Row>
                         <Form.Row>
                                                     <Form.Group as={Col}>
-                                                            <Form.Label>Funding Renovation</Form.Label>
-                                                            <Form.Control className={classes.input} type="text" placeholder=" Yes"/>
-                                                        
+                                                            {/* <Form.Label>Funding Renovation</Form.Label>
+                                                            <Form.Control className={classes.input} type="text" placeholder=" Yes"
+                                                            value={financProp.fundingRenovation} 
+                                                            onChange={e => setFinanceProp({ ...financProp, fundingRenovation: e.target.value})}/>
+                                                         */}
+                                                         {/* <FormGroup> */}
                                                             <Form.Label>Downpayment (%)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" placeholder=" 0 0 0 0 0"/>
+                                                            <Form.Control className={classes.input} type="number" placeholder=" 0 0 0 0 0"
+                                                            value={financProp.downpaymentPercentage} 
+                                                            onChange={e => setFinanceProp({ ...financProp, downpaymentPercentage: e.target.value})}/>
 
                                                             <Form.Label>Donwpayment ($)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" />
+                                                            <Form.Control className={classes.input} type="number"
+                                                            value={financProp.downpaymentAmount} 
+                                                            onChange={e => setFinanceProp({ ...financProp, downpaymentAmount: e.target.value})} />
 
                                                             <Form.Label>Loan Amount ($)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" placeholder=" 0 0 0 0 0"/>
+                                                            <Form.Control className={classes.input} type="number" placeholder=" 0 0 0 0 0"
+                                                            value={loanAmount} 
+                                                            />
 
                                                             <Form.Label>Interest Rate (%)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" />
+                                                            <Form.Control className={classes.input} type="number"
+                                                            value={financProp.InterestRate} 
+                                                            onChange={e => setFinanceProp({ ...financProp, InterestRate: e.target.value})} />
+
+                                                            <Form.Label>Term (yrs & months)</Form.Label>
+                                                            <Form.Control className={classes.input} type="number"  placeholder=" 0 0 0 0 0"
+                                                            value={financProp.term} 
+                                                            onChange={e => setFinanceProp({ ...financProp, term : e.target.value})}
+                                                            />
+                                                         {/* </FormGroup> */}
                                                     </Form.Group>
 
                                                     <Form.Group as={Col}>
-                                                        <Form.Label>Term (yrs & months)</Form.Label>
-                                                        <Form.Control className={classes.input} type="number"  placeholder=" 0 0 0 0 0"/>
 
                                                         <Form.Label>Loan Fees ($)</Form.Label>
-                                                        <Form.Control className={classes.input} type="number" />
+                                                        <Form.Control className={classes.input} type="number"
+                                                        value={financProp.loanFees} 
+                                                        onChange={e => setFinanceProp({ ...financProp, loanFees: e.target.value})} />
 
                                                         <Form.Label>Loan Points (pts)</Form.Label>
-                                                        <Form.Control className={classes.input} type="text"/>
+                                                        <Form.Control className={classes.input} type="text"
+                                                        value={financProp.loanPoints} 
+                                                        onChange={e => setFinanceProp({ ...financProp, loanPoints : e.target.value})}/>
                                                     
                                                         <Form.Label>Interest Only Payments</Form.Label>
-                                                        <Form.Control className={classes.input} type="number" />
+                                                        <Form.Control className={classes.input} type="number"
+                                                        value={financProp.InterestOnlyPayments} 
+                                                        onChange={e => setFinanceProp({ ...financProp, InterestOnlyPayments: e.target.value})} />
 
                                                         <Form.Label>Grace Period (months)</Form.Label>
-                                                        <Form.Control className={classes.input} type="number" placeholder=" 0 0 0 0 0"/>
+                                                        <Form.Control className={classes.input} type="number" placeholder=" 0 0 0 0 0"
+                                                        value={financProp.gracePeriod} 
+                                                        onChange={e => setFinanceProp({ ...financProp, gracePeriod: e.target.value})}/>
 
                                                         <Form.Label>How many months?</Form.Label>
-                                                        <Form.Control className={classes.input} type="number" />
+                                                        <Form.Control className={classes.input} type="number"
+                                                        value={financProp.totalMonths} 
+                                                        onChange={e => setFinanceProp({ ...financProp, totalMonths: e.target.value})} />
                                                     </Form.Group>
                                             
                                             </Form.Row>
@@ -122,7 +227,7 @@ function NewRenovationTab (){
     
 }
 
-export default NewRenovationTab;
+export default FinancingOne;
 
 
 

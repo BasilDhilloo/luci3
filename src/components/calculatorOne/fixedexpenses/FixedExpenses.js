@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState,useEffect} from 'react';
 import styles from './fixedexpenses.module.css'
 import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
@@ -38,6 +38,33 @@ function FixedExpenses (){
     const theme = useTheme();
     const classes = useStyles({ theme });
 
+    const [fixedProp, setfixedProp] = useState({
+        electric:"",
+        waterSewer: "",
+        PMI: "",
+        garbage: "",
+        HOA: "",
+        taxes: "",
+        insurance: "",
+        others: ""
+    });
+
+    const [totalfixed, settotalfixed] = useState();
+
+    useEffect(() => {
+        const sum = obj => {
+            var sum = 0
+            for(var el in obj){
+                sum += obj[el]==""?0:parseFloat(obj[el]);
+            }
+            return sum; 
+        }
+        
+        var summed = sum(fixedProp);
+        settotalfixed(summed)
+
+    }, [fixedProp])
+
         return (
             <Grid container xl={12} lg={12} md={12} sm={12} xs={12}   direction="column"  justify="space-around"  style={{backgroundColor:"#e5e5e5"}}>
                 <Grid item>
@@ -61,38 +88,48 @@ function FixedExpenses (){
                                 <Form.Row>
                                     <Form.Group as={Col}>
                                         <Form.Label>Electric</Form.Label>
-                                        <Form.Control className={classes.input} type="text" />
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.electric}
+                                        onChange={e => setfixedProp({...fixedProp, electric: e.target.value})} />
 
                                         <Form.Label>Water and Sewer</Form.Label>
-                                        <Form.Control className={classes.input} type="text" />
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.waterSewer}
+                                        onChange={e => setfixedProp({...fixedProp, waterSewer: e.target.value})}  />
 
                                         <Form.Label>HOA</Form.Label>
-                                        <Form.Control className={classes.input} type="text" />
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.HOA}
+                                        onChange={e => setfixedProp({...fixedProp, HOA: e.target.value})}  />
                                                         
                                         <Form.Label> Insurance</Form.Label>
-                                        <Form.Control className={classes.input} type="text" />
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.insurance}
+                                        onChange={e => setfixedProp({...fixedProp, insurance: e.target.value})}  />
 
                                     </Form.Group>
 
                                     <Form.Group as={Col}>
                                         <Form.Label>PMI</Form.Label>
-                                        <Form.Control className={classes.input} type="text" />
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.PMI}
+                                        onChange={e => setfixedProp({...fixedProp, PMI: e.target.value})}  />
                                                                 
                                         <Form.Label>Garbage</Form.Label>
-                                        <Form.Control className={classes.input} type="text" />
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.garbage}
+                                        onChange={e => setfixedProp({...fixedProp, garbage: e.target.value})}  />
 
                                         <Form.Label> Monthly Taxes </Form.Label>
-                                        <Form.Control className={classes.input} type="text" />
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.taxes}
+                                        onChange={e => setfixedProp({...fixedProp, taxes: e.target.value})}  />
 
                                         <Form.Label>Others</Form.Label>
-                                        <Form.Control className={classes.input} type="text" />
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.others}
+                                        onChange={e => setfixedProp({...fixedProp, others: e.target.value})}  />
                                     </Form.Group>
                                 </Form.Row>
 
                                 <Form.Row>
                                     <FormGroup as={Col}>
                                         <Form.Label>Total</Form.Label>
-                                        <Form.Control className={classes.inputtwo} type="text" placeholder=" 0 0 0 0 0"  />
+                                        <Form.Control className={classes.inputtwo} type="text" 
+                                        value={totalfixed}
+                                        placeholder=" 0 0 0 0 0"  />
                                     </FormGroup>
                                 </Form.Row>
                             </Form>

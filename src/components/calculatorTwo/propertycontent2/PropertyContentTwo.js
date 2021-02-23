@@ -5,7 +5,7 @@ import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
 import { createUseStyles, useTheme } from 'react-jss';
 import { SidebarTwoComponent, SidebarContext } from 'components/sidebar2';
-import {Form, Col} from 'react-bootstrap';
+import {Form, Col, FormGroup} from 'react-bootstrap';
 import { Grid } from "@material-ui/core"
 
 
@@ -54,64 +54,29 @@ class PropertyContentTwo extends React.Component{
                     <Grid item xl={9} lg={9} md={9} sm={12} xs={12}>
                         <Form className={styles.margins}>
                             <Form.Row>
-                                <Form.Group as={Col} controlId="formGridPropertyAddress">
-                                <Form.Label>Property Address</Form.Label>
-                                <Form.Control className={styles.innput} type="text"  />
-                                </Form.Group>
+                                <FormGroup as={Col} controlId="formGridPropertyAddress">
+                                    <Form.Label className={styles.labelMargin}>Property Address</Form.Label>
+                                    <Form.Control className={styles.innput} type="text"  />
 
-                                <Form.Group as={Col} controlId="formGridCity">
-                                <Form.Label>City</Form.Label>
-                                <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridState">
-                                    <Form.Label>State</Form.Label>
+                                    <Form.Label className={styles.labelMargin}> Number of Beds </Form.Label>
                                     <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
 
-                                <Form.Group as={Col} controlId="formGridZipCode">
-                                <Form.Label>Zip Code</Form.Label>
-                                <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridBeds">
-                                    <Form.Label>Beds</Form.Label>
+                                    <Form.Label className={styles.labelMargin}>Lot -size</Form.Label>
                                     <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
+                                </FormGroup>
 
-                                <Form.Group as={Col} controlId="formGridBaths">
-                                <Form.Label>Baths</Form.Label>
-                                <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridLotSize">
-                                    <Form.Label>Lot -size</Form.Label>
+                                <FormGroup as={Col} controlId="formGridState">
+                                    <Form.Label className={styles.labelMargin}> Prior Year Taxes </Form.Label>
                                     <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
 
-                                <Form.Group as={Col} controlId="formGridPropertySqFt">
-                                <Form.Label>Property Sq. ft</Form.Label>
-                                <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-                            </Form.Row>
-
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridPYT">
-                                    <Form.Label>Prior Year Taxes USD</Form.Label>
+                                    <Form.Label className={styles.labelMargin}>Number of Baths </Form.Label>
                                     <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
 
-                                <Form.Group as={Col}>
-
-                                </Form.Group>
+                                    <Form.Label className={styles.labelMargin}>Sq. Ft.  </Form.Label>
+                                    <Form.Control className={styles.innput} type="text" />
+                                </FormGroup>
                             </Form.Row>
+
                         </Form>
 
                         <Grid item container direction="column" xl={11} lg={11} md={11} sm={12} xs={12} className={styles.imageDivMain}>

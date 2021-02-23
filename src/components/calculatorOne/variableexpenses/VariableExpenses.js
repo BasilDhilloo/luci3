@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from './variableexpenses.module.css'
 import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
@@ -9,21 +9,6 @@ import { Grid } from "@material-ui/core"
 
 
 const useStyles = createUseStyles({
-    container: {
-        height: '100%',
-        minHeight: 850
-    },
-    mainBlock: {
-        marginLeft: 255,
-        // padding: 30,
-        '@media (max-width: 900px)': {
-            marginLeft: 0
-        }
-    },
-    contentBlock: {
-        marginTop: 54
-    },
-
     input: {
         backgroundColor:"rgba(128, 0, 128, 0.1)",
         borderRadius: "15px",
@@ -53,6 +38,28 @@ function VariableExpenses (){
     const theme = useTheme();
     const classes = useStyles({ theme });
 
+    const [variProp, setvariProp] = useState({
+        vacancy: "",
+        repairMaint: "",
+        capEx: "",
+        management:""
+    })
+    
+    const [varitotal, setvaritotal] = useState()
+
+    useEffect(() => {
+        const totalVariable = obj => {
+            let sum = 0;
+            for(var el in obj){
+                sum += obj[el]==""?0:(parseFloat(obj[el])/100)*2600;
+            }
+            return sum;
+        }
+
+        var summed = totalVariable(variProp)
+        setvaritotal(summed)
+    }, [variProp])
+
         return (
             <Grid container xl={12} lg={12} md={12} sm={12} xs={12}   direction="column"  justify="space-around"  style={{backgroundColor:"#e5e5e5"}}>
                 <Grid item>
@@ -80,32 +87,24 @@ function VariableExpenses (){
                             </Form.Row>
                                             <Form.Row>
                                                 <Form.Group as={Col}>
-                                                        <Form.Label>Management Fee ($)</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
+                                                        <Form.Label>Vacancy (%)</Form.Label>
+                                                        <Form.Control className={classes.input} type="text" value={variProp.vacancy}
+                                                        onChange={e => setvariProp({...variProp, vacancy: e.target.value})} />
 
                                                         <Form.Label> Repair/Maint ($)</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-
-                                                        <Form.Label>Cap. Ex ($)</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-                                            
-                                                        <Form.Label> Vacancy ($) </Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
+                                                        <Form.Control className={classes.input} type="text" value={variProp.repairMaint}
+                                                        onChange={e => setvariProp({...variProp, repairMaint: e.target.value})} />
                                             
                                                 </Form.Group>
 
                                                 <Form.Group as={Col}>
-                                                        <Form.Label>Repair/Maint (%)</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-
                                                         <Form.Label>Cap. Ex (%)</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-                                                    
-                                                        <Form.Label>Vacancy (%)</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
+                                                        <Form.Control className={classes.input} type="text" value={variProp.capEx}
+                                                        onChange={e => setvariProp({...variProp, capEx: e.target.value})} />
 
                                                         <Form.Label>Management Fee (%)</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
+                                                        <Form.Control className={classes.input} type="text" value={variProp.management}
+                                                        onChange={e => setvariProp({...variProp, management: e.target.value})} />
                                                 </Form.Group>
                                                                                         
                                         </Form.Row>
@@ -113,7 +112,7 @@ function VariableExpenses (){
                                         <Form.Row>
                                                     <FormGroup as={Col}>
                                                         <Form.Label>Total</Form.Label>
-                                                        <Form.Control className={classes.inputtwo} type="text" placeholder=" 0 0 0 0 0"  />
+                                                        <Form.Control className={classes.inputtwo} type="text" placeholder=" 0 0 0 0 0" value={varitotal}  />
                                                     </FormGroup>
                                                 
                                             </Form.Row>

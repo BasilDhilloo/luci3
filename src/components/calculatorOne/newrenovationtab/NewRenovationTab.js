@@ -4,70 +4,132 @@ import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
 import { createUseStyles, useTheme } from 'react-jss';
 import { SidebarComponent, SidebarContext } from 'components/sidebar';
-import {Form, Col, ToggleButton} from 'react-bootstrap';
+import { makeStyles } from "@material-ui/core/styles";
+import {Form, Col} from 'react-bootstrap';
+import FormControl from "@material-ui/core/FormControl";
 import { Grid } from "@material-ui/core"
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 
 
 
-
-const useStyles = createUseStyles({
-    input: {
-        backgroundColor:"background: rgba(0, 0, 0, 0.1)",
-        borderRadius: "15px",
-        width: "80%",
-        height:"57px",
-        marginBottom:"15px"
-    },
-
-    inputtwo:{
-        backgroundColor:"rgba(128, 0, 128, 0.1)",
-        borderRadius: "15px",
-        width: "60%",
-        height:"57px",
-        marginBottom:"15px"
-    },
-    margins:{
-        marginTop:"10px",
-        marginLeft: "15px"
-    },
-    inputone: {
-        height: "45px",
-        width: "55px",
-        borderRadius: 4,
-        position: 'relative',
-        backgroundColor: "rgba(128, 0, 128, 0.1)",
-        border: '1px solid #ced4da',
-        fontSize: 16,
-        marginLeft:"35%",
-        // padding: '10px 26px 10px 10px',
-        // transition: theme.transitions.create(['border-color', 'box-shadow']),
-        // Use the system font instead of the default Roboto font.
-        fontFamily: [
-          '-apple-system',
-          'BlinkMacSystemFont',
-          '"Segoe UI"',
-          'Roboto',
-          '"Helvetica Neue"',
-          'Arial',
-          'sans-serif',
-          '"Apple Color Emoji"',
-          '"Segoe UI Emoji"',
-          '"Segoe UI Symbol"',
-        ].join(','),
-        '&:focus': {
-          borderRadius: 4,
-          borderColor: '#80bdff',
-        //   // boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-        },
+const useStylesOne = makeStyles((theme) => ({
+    quantityRoot: {
+      color: "#4B176A",
+      backgroundColor: "green",
+      opacity: 0.6,
+      borderRadius: "5px",
+      marginLeft : "5px",
+      "&:hover": {
+        backgroundColor: "#1E1E24",
+        borderRadius: "5px",
+        opacity: 1
       },
-
+      "&:focus-within": {
+        backgroundColor: "#1E1E24",
+        borderRadius: "5px",
+        opacity: 1
+      },
+      "& .MuiOutlinedInput-notchedOutline": {
+        border: "1px solid #484850"
+      },
+      "&:hover .MuiOutlinedInput-notchedOutline": {
+        border: "1px solid #484850"
+      },
       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-        border: "2px solid #484850",
-        borderRadius: "5px 5px 5px 5px"
+        border: "1px solid #484850",
+        borderRadius: "5px",
+        outline: "none"
       },
-});
+      "& .Mui-disabled": {
+        color: "#FFFFFF",
+        opacity: 0.6
+      },
+      "& .Mui-disabled .MuiOutlinedInput-notchedOutline": {
+        border: "1px solid #484850"
+      }
+    },
+    selectRoot: {
+      color: "#4B176A"
+    },
+    icon: {
+      color: "#4B176A"
+    },
+    selectPaper: {
+      backgroundColor: "#1E1E24",
+      border: "1px solid #484850",
+      borderRadius: "5px",
+      color: "#FFFFFF",
+      "& li:hover": {
+        backgroundColor: "#303039"
+      }
+    }
+}));
+
+// const useStyles = createUseStyles({
+//     input: {
+//         backgroundColor:"rgba(128, 0, 128, 0.1)",
+//         borderRadius: "15px",
+//         width: "80%",
+//         height:"57px",
+//         marginBottom:"15px"
+//     },
+
+//     inputtotal : {
+//         backgroundColor:"#e5e5e5",
+//         borderRadius: "15px",
+//         width: "80%",
+//         height:"57px",
+//         marginBottom:"15px"
+//     },
+
+//     inputtwo:{
+//         backgroundColor:"rgba(128, 0, 128, 0.1)",
+//         borderRadius: "15px",
+//         width: "60%",
+//         height:"57px",
+//         marginBottom:"15px"
+//     },
+//     margins:{
+//         marginTop:"10px",
+//         marginLeft: "15px"
+//     },
+//     inputone: {
+//         height: "45px",
+//         width: "55px",
+//         borderRadius: 4,
+//         position: 'relative',
+//         backgroundColor: "rgba(128, 0, 128, 0.1)",
+//         border: '1px solid #ced4da',
+//         fontSize: 16,
+//         marginLeft:"35%",
+//         // padding: '10px 26px 10px 10px',
+//         // transition: theme.transitions.create(['border-color', 'box-shadow']),
+//         // Use the system font instead of the default Roboto font.
+//         fontFamily: [
+//           '-apple-system',
+//           'BlinkMacSystemFont',
+//           '"Segoe UI"',
+//           'Roboto',
+//           '"Helvetica Neue"',
+//           'Arial',
+//           'sans-serif',
+//           '"Apple Color Emoji"',
+//           '"Segoe UI Emoji"',
+//           '"Segoe UI Symbol"',
+//         ].join(','),
+//         '&:focus': {
+//           borderRadius: 4,
+//           borderColor: '#80bdff',
+//         //   // boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+//         },
+//       },
+
+//       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+//         border: "2px solid #484850",
+//         borderRadius: "5px 5px 5px 5px"
+//       },
+// });
 
 
 
@@ -98,8 +160,10 @@ function Financing (){
 
     const otherWay = {height:"100vh"}
     // const styleOther = {position: "fixed"}
-    const theme = useTheme();
-    const classes = useStyles({ theme });
+    // const theme = useTheme();
+    // const classes = useStyles({ theme });
+    const classesOne = useStylesOne();
+
 
 
     const handleChange = (event) => {
@@ -161,16 +225,40 @@ function Financing (){
                                     </Form.Row>
 
                                     <Form.Row>
-                                        <Form.Group as={Col} style={{display:"inline-flex"}} >          
-                                            <Form.Label >Itemize</Form.Label>
+                                        <Form.Group as={Col} style={{display:"inline-flex"}} > 
+                                                 
+                                            {/* <Form.Label >Itemize</Form.Label>
                                                 <Select
                                                 value={status}
                                                 onChange={handleChange}
-                                                className={classes.inputone}
+                                                // className={classes.inputone}
+                                                className = {classesOne.selectRoot}
+                                                classesOne={{
+                                                    root: classesOne.selectRoot,
+                                                    icon: classesOne.icon
+                                                  }}
                                                 >
-                                                <MenuItem value={true}>Yes</MenuItem>
+                                                <MenuItem  value={true}>Yes</MenuItem>
                                                 <MenuItem value={false}>No</MenuItem>
-                                                </Select>
+                                                </Select> */}
+
+                                                <FormControl
+                                                        // variant="outlined"
+                                                        classesOne={{
+                                                        root: classesOne.quantityRoot
+                                                        }}
+                                                    ><Form.Label >Itemize</Form.Label>
+                                                        <Select
+                                                            onChange={handleChange}
+                                                            classesOne={{
+                                                            root: classesOne.selectRoot,
+                                                            icon: classesOne.icon
+                                                        }}
+                                                        MenuProps={{ classesOne: { paper: classesOne.selectPaper } }}>
+                                                            <MenuItem  value={true}>Yes</MenuItem>
+                                                            <MenuItem value={false}>No</MenuItem>
+                                                        </Select>
+                                                    </FormControl>
                                         </Form.Group> <Form.Group as={Col}></Form.Group>
                                     </Form.Row>
 
@@ -289,7 +377,7 @@ function Financing (){
                                             onChange={e => setRenoProp({ ...renoProp, miscelaneousCost: e.target.value})} />
 
                                             <Form.Label>Total ($)</Form.Label>
-                                            <Form.Control className={classes.input}                                             
+                                            <Form.Control className={classes.inputtotal}                                              
                                             type="number"
                                             value= {renoTotal} 
                                             // onChange={e => setrenoTotal({ ...renoProp, renoTotal: e.target.value})} 
@@ -320,7 +408,7 @@ function Financing (){
                                             onChange={e => setRenoProp({ ...renoProp, noOfBaths: e.target.value})} />
 
                                             <Form.Label> Total Rehab</Form.Label>
-                                            <Form.Control className={classes.input}                                             
+                                            <Form.Control className={classes.inputtotal}                                            
                                             type="number"
                                             value={renoTotal} 
                                             // onChange={e => setRenoProp({ ...renoProp, renoTotal: e.target.value})} 
