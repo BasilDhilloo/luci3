@@ -15,28 +15,33 @@ import Select from '@material-ui/core/Select';
 
 const useStylesOne = makeStyles((theme) => ({
     quantityRoot: {
-      color: "#4B176A",
-      backgroundColor: "green",
-      opacity: 0.6,
-      borderRadius: "5px",
-      marginLeft : "5px",
+      color: "#ffffff",
+      backgroundColor: "rgba(128, 0, 128, 0.1)",
+      paddingTop: "4px",
+    //   opacity: 0.6,
+      borderRadius: "2px rgba(128, 0, 128, 0.1)",
+      marginLeft : "15px",
       "&:hover": {
-        backgroundColor: "#1E1E24",
-        borderRadius: "5px",
+        paddingTop: "4px",
+        backgroundColor: "#e5e5e5",
+        borderRadius: "2px",
         opacity: 1
       },
       "&:focus-within": {
-        backgroundColor: "#1E1E24",
+        paddingTop: "4px",
+        backgroundColor: "#ffffff",
         borderRadius: "5px",
         opacity: 1
       },
       "& .MuiOutlinedInput-notchedOutline": {
+        paddingTop: "4px",
         border: "1px solid #484850"
       },
       "&:hover .MuiOutlinedInput-notchedOutline": {
         border: "1px solid #484850"
       },
       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+        paddingTop: "4px",
         border: "1px solid #484850",
         borderRadius: "5px",
         outline: "none"
@@ -50,86 +55,88 @@ const useStylesOne = makeStyles((theme) => ({
       }
     },
     selectRoot: {
-      color: "#4B176A"
+      color: "#4B176A",
+      backgroundColor: "#ffffff"
     },
-    icon: {
+    icon : {
       color: "#4B176A"
     },
     selectPaper: {
       backgroundColor: "#1E1E24",
       border: "1px solid #484850",
       borderRadius: "5px",
+      paddingTop: "4px",
       color: "#FFFFFF",
       "& li:hover": {
-        backgroundColor: "#303039"
+        backgroundColor: "#4B176A"
       }
     }
 }));
 
-// const useStyles = createUseStyles({
-//     input: {
-//         backgroundColor:"rgba(128, 0, 128, 0.1)",
-//         borderRadius: "15px",
-//         width: "80%",
-//         height:"57px",
-//         marginBottom:"15px"
-//     },
+const useStyles = createUseStyles({
+    input: {
+        backgroundColor:"rgba(128, 0, 128, 0.1)",
+        borderRadius: "15px",
+        width: "80%",
+        height:"57px",
+        marginBottom:"15px"
+    },
 
-//     inputtotal : {
-//         backgroundColor:"#e5e5e5",
-//         borderRadius: "15px",
-//         width: "80%",
-//         height:"57px",
-//         marginBottom:"15px"
-//     },
+    inputtotal : {
+        backgroundColor:"#e5e5e5",
+        borderRadius: "15px",
+        width: "80%",
+        height:"57px",
+        marginBottom:"15px"
+    },
 
-//     inputtwo:{
-//         backgroundColor:"rgba(128, 0, 128, 0.1)",
-//         borderRadius: "15px",
-//         width: "60%",
-//         height:"57px",
-//         marginBottom:"15px"
-//     },
-//     margins:{
-//         marginTop:"10px",
-//         marginLeft: "15px"
-//     },
-//     inputone: {
-//         height: "45px",
-//         width: "55px",
-//         borderRadius: 4,
-//         position: 'relative',
-//         backgroundColor: "rgba(128, 0, 128, 0.1)",
-//         border: '1px solid #ced4da',
-//         fontSize: 16,
-//         marginLeft:"35%",
-//         // padding: '10px 26px 10px 10px',
-//         // transition: theme.transitions.create(['border-color', 'box-shadow']),
-//         // Use the system font instead of the default Roboto font.
-//         fontFamily: [
-//           '-apple-system',
-//           'BlinkMacSystemFont',
-//           '"Segoe UI"',
-//           'Roboto',
-//           '"Helvetica Neue"',
-//           'Arial',
-//           'sans-serif',
-//           '"Apple Color Emoji"',
-//           '"Segoe UI Emoji"',
-//           '"Segoe UI Symbol"',
-//         ].join(','),
-//         '&:focus': {
-//           borderRadius: 4,
-//           borderColor: '#80bdff',
-//         //   // boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
-//         },
-//       },
+    inputtwo:{
+        backgroundColor:"rgba(128, 0, 128, 0.1)",
+        borderRadius: "15px",
+        width: "60%",
+        height:"57px",
+        marginBottom:"15px"
+    },
+    margins:{
+        marginTop:"10px",
+        marginLeft: "15px"
+    },
+    inputone: {
+        height: "45px",
+        width: "55px",
+        borderRadius: 4,
+        position: 'relative',
+        backgroundColor: "rgba(128, 0, 128, 0.1)",
+        border: '1px solid #ced4da',
+        fontSize: 16,
+        marginLeft:"35%",
+        // padding: '10px 26px 10px 10px',
+        // transition: theme.transitions.create(['border-color', 'box-shadow']),
+        // Use the system font instead of the default Roboto font.
+        fontFamily: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          '"Helvetica Neue"',
+          'Arial',
+          'sans-serif',
+          '"Apple Color Emoji"',
+          '"Segoe UI Emoji"',
+          '"Segoe UI Symbol"',
+        ].join(','),
+        '&:focus': {
+          borderRadius: 4,
+          borderColor: '#80bdff',
+        //   // boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+        },
+      },
 
-//       "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
-//         border: "2px solid #484850",
-//         borderRadius: "5px 5px 5px 5px"
-//       },
-// });
+      "& .Mui-focused .MuiOutlinedInput-notchedOutline": {
+        border: "2px solid #484850",
+        borderRadius: "5px 5px 5px 5px"
+      },
+});
 
 
 
@@ -160,11 +167,9 @@ function Financing (){
 
     const otherWay = {height:"100vh"}
     // const styleOther = {position: "fixed"}
-    // const theme = useTheme();
-    // const classes = useStyles({ theme });
+    const theme = useTheme();
+    const classes = useStyles({ theme });
     const classesOne = useStylesOne();
-
-
 
     const handleChange = (event) => {
       setStatus(event.target.value);
@@ -175,6 +180,7 @@ function Financing (){
             var sum = 0 ;
             for(var el in obj) {
             //   if(obj.hasOwnProperty(el)) {
+              // console.log(obj[el])
                 sum += obj[el]==""?0:parseFloat(obj[el]);
             //   }
             }
@@ -241,19 +247,14 @@ function Financing (){
                                                 <MenuItem  value={true}>Yes</MenuItem>
                                                 <MenuItem value={false}>No</MenuItem>
                                                 </Select> */}
-
+                                                <Form.Label >Itemize</Form.Label>
                                                 <FormControl
-                                                        // variant="outlined"
-                                                        classesOne={{
-                                                        root: classesOne.quantityRoot
-                                                        }}
-                                                    ><Form.Label >Itemize</Form.Label>
+                                                        variant="outlined"
+                                                        className={classesOne.quantityRoot}
+                                                    >
                                                         <Select
                                                             onChange={handleChange}
-                                                            classesOne={{
-                                                            root: classesOne.selectRoot,
-                                                            icon: classesOne.icon
-                                                        }}
+                                                            className={classesOne.selectRoot, classesOne.icon}
                                                         MenuProps={{ classesOne: { paper: classesOne.selectPaper } }}>
                                                             <MenuItem  value={true}>Yes</MenuItem>
                                                             <MenuItem value={false}>No</MenuItem>

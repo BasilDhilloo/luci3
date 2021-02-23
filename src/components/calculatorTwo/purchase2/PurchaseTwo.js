@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import styles from './purchase.module.css'
 import "./purchase.css"
 import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
 import { createUseStyles, useTheme } from 'react-jss';
 import { SidebarTwoComponent, SidebarContext } from 'components/sidebar2';
-import {Form, Col} from 'react-bootstrap';
+import {Form, Col, FormGroup} from 'react-bootstrap';
 import { Grid } from "@material-ui/core"
 
 
@@ -29,7 +29,8 @@ const useStyles = createUseStyles({
         backgroundColor:"rgba(128, 0, 128, 0.1)",
         borderRadius: "15px",
         width: "80%",
-        height:"47px"
+        height:"47px",
+        marginBottom:"15px"
     },
     margins:{
         marginTop:"10px",
@@ -44,6 +45,14 @@ function PurchaseTwo (){
     const styleOther = {position: "fixed"}
     const theme = useTheme();
     const classes = useStyles({ theme });
+
+    const [purchProp, setPurchProp] = useState({
+        askingPrice: "",
+        offerPrice: "",
+        earnestMoney: "",
+        closingCost: "",
+        emergencyFunds: ""
+    })
 
         return (
             <Grid container xl={12} lg={12} md={12} sm={12} xs={12}   direction="column"  justify="space-around"  style={{backgroundColor:"#e5e5e5"}}>
@@ -61,26 +70,41 @@ function PurchaseTwo (){
 
                     <Grid item xl={9} lg={9} md={9} sm={12} xs={12} style={{height:'75vh'}}>
                         <Form  className={classes.margins} >
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridPropertyAddress">
-                                <Form.Label>Asking Price ($)</Form.Label>
-                                <Form.Control className={classes.input} type="text"  />
+                        <Form.Row>
+                                <Form.Group as={Col} controlId="formGridPurchase">
+                                    <Form.Label>Asking Price ($)</Form.Label>
+                                    <Form.Control className={classes.input} type="text"
+                                    onChange={e => setPurchProp({...purchProp, askingPrice : e.target.value})}
+                                    value={purchProp.askingPrice}
+                                     />
+
+                                    <Form.Label>Earnest Money Depost</Form.Label>
+                                    <Form.Control className={classes.input} type="text"
+                                    onChange={e => setPurchProp({...purchProp, earnestMoney : e.target.value})} 
+                                    value={purchProp.earnestMoney}
+                                    />
+
+                                    <Form.Label>Emergency Fund</Form.Label>
+                                    <Form.Control className={classes.input} type="text"
+                                    onChange={e => setPurchProp({...purchProp, emergencyFunds : e.target.value})}
+                                    value={purchProp.emergencyFunds}
+                                     />
                                 </Form.Group>
 
-                                <Form.Group as={Col} controlId="formGridCity">
-                                <Form.Label>Closing Costs ($)</Form.Label>
-                                <Form.Control className={classes.input} type="text" />
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
                                 <Form.Group as={Col} controlId="formGridState">
-                                    <Form.Label>Purchase Price ($)</Form.Label>
-                                    <Form.Control className={classes.input} type="text" />
-                                </Form.Group>
+                                    <FormGroup>
+                                        <Form.Label>Offer Price ($)</Form.Label>
+                                        <Form.Control className={classes.input} type="text"
+                                        onChange={e => setPurchProp({...purchProp, offerPrice : e.target.value})}
+                                        value={purchProp.offerPrice}
+                                         />
 
-                                <Form.Group as={Col}>
-
+                                        <Form.Label>Closing Cost</Form.Label>
+                                        <Form.Control className={classes.input} type="text"
+                                        onChange={e => setPurchProp({...purchProp, closingCost : e.target.value})}
+                                        value={purchProp.closingCost}
+                                         />
+                                    </FormGroup>
                                 </Form.Group>
                             </Form.Row>
 

@@ -14,7 +14,8 @@ const useStyles = createUseStyles({
         backgroundColor:"rgba(128, 0, 128, 0.1)",
         borderRadius: "15px",
         width: "80%",
-        height:"47px"
+        height:"47px",
+        marginBottom:"15px"
     },
 
     imageDivMain: {

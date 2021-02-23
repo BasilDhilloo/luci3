@@ -1,27 +1,25 @@
-import React, { Component } from 'react'
+import React, { setState } from 'react'
 import styles from './propertycontent.module.css'
 import "./propertycontent.css"
 import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
 import { createUseStyles, useTheme } from 'react-jss';
-import { SidebarTwoComponent, SidebarContext } from 'components/sidebar2';
+import { SidebarComponent, SidebarContext } from 'components/sidebar';
 import {Form, Col} from 'react-bootstrap';
 import { Grid } from "@material-ui/core"
 
 
-// const useStyles = createUseStyles({
-
-// });
-
-
-
 class PropertyContent extends React.Component{
-    // const theme = useTheme();
-    // const styles = useStyles({ theme });
     constructor(props){
         super(props);
         this.state = {
-            image: null
+            image: null,
+            propAddress : "",
+            priorYearTax : "",
+            noOfBeds: "",
+            noOfBaths: "",
+            lotSize: "",
+            sqFt: ""
         };
 
         this.onImageChange = this.onImageChange.bind(this);
@@ -48,68 +46,38 @@ class PropertyContent extends React.Component{
                 <Grid item container xl={11} lg={11} md={10} sm={12} xs={12}  direction="row" justify="flex-start" style={{backgroundColor:"#ffffff"}}>
                 <SidebarContext>
                     <Grid item xl={3} lg={3} md={3} sm={0} xs={0} >
-                        <SidebarTwoComponent style={otherWay} />
+                        <SidebarComponent style={otherWay} />
                     </Grid>
 
                     <Grid item xl={9} lg={9} md={9} sm={12} xs={12}>
                         <Form className={styles.margins}>
                             <Form.Row>
                                 <Form.Group as={Col} controlId="formGridPropertyAddress">
-                                <Form.Label>Property Address</Form.Label>
-                                <Form.Control className={styles.innput} type="text"  />
+                                    <Form.Label>Property Address</Form.Label>
+                                    <Form.Control className={styles.innput} type="text" value={this.state.propAddress} 
+                                    onChange={(e) => this.setState({propAddress : e.target.value})} />
+
+                                    <Form.Label> Number of Beds</Form.Label>
+                                    <Form.Control className={styles.innput} type="text" value={this.state.noOfBeds} 
+                                    onChange={(e) => this.setState({noOfBeds : e.target.value})} />
+
+                                    <Form.Label>Lot -size</Form.Label>
+                                    <Form.Control className={styles.innput} type="text" value={this.state.lotSize} 
+                                    onChange={(e) => this.setState({lotSize : e.target.value})} />
                                 </Form.Group>
 
                                 <Form.Group as={Col} controlId="formGridCity">
-                                <Form.Label>City</Form.Label>
-                                <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridState">
-                                    <Form.Label>State</Form.Label>
-                                    <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridZipCode">
-                                <Form.Label>Zip Code</Form.Label>
-                                <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridBeds">
-                                    <Form.Label>Beds</Form.Label>
-                                    <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridBaths">
-                                <Form.Label>Baths</Form.Label>
-                                <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-                            </Form.Row>
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridLotSize">
-                                    <Form.Label>Lot -size</Form.Label>
-                                    <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-
-                                <Form.Group as={Col} controlId="formGridPropertySqFt">
-                                <Form.Label>Property Sq. ft</Form.Label>
-                                <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
-                            </Form.Row>
-
-
-                            <Form.Row>
-                                <Form.Group as={Col} controlId="formGridPYT">
                                     <Form.Label>Prior Year Taxes USD</Form.Label>
-                                    <Form.Control className={styles.innput} type="text" />
-                                </Form.Group>
+                                    <Form.Control className={styles.innput} type="text" value={this.state.priorYearTax} 
+                                    onChange={(e) => this.setState({priorYearTax : e.target.value})} />
 
-                                <Form.Group as={Col}>
+                                    <Form.Label>Number of Baths</Form.Label>
+                                    <Form.Control className={styles.innput} type="text" value={this.state.noOfBaths} 
+                                    onChange={(e) => this.setState({noOfBaths : e.target.value})} />
 
+                                    <Form.Label>Property Sq. ft</Form.Label>
+                                    <Form.Control className={styles.innput} type="text" value={this.state.sqFt} 
+                                    onChange={(e) => this.setState({sqFt : e.target.value})} />
                                 </Form.Group>
                             </Form.Row>
                         </Form>
