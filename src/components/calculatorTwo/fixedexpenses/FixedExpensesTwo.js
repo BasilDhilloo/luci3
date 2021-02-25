@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {useState, useEffect} from 'react';
 import styles from './fixedexpenses.module.css'
 import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
@@ -53,6 +53,33 @@ function FixedExpensesTwo (){
     const theme = useTheme();
     const classes = useStyles({ theme });
 
+    const [fixedProp, setfixedProp] = useState({
+        electric:"",
+        waterSewer: "",
+        PMI: "",
+        garbage: "",
+        HOA: "",
+        taxes: "",
+        insurance: "",
+        others: ""
+    });
+
+    const [totalfixed, settotalfixed] = useState();
+
+    useEffect(() => {
+        const sum = obj => {
+            var sum = 0
+            for(var el in obj){
+                sum += obj[el]==""?0:parseFloat(obj[el]);
+            }
+            return sum; 
+        }
+        
+        var summed = sum(fixedProp);
+        settotalfixed(summed)
+
+    }, [fixedProp])
+
         return (
             <Grid container xl={12} lg={12} md={12} sm={12} xs={12}   direction="column"  justify="space-around"  style={{backgroundColor:"#e5e5e5"}}>
                 <Grid item>
@@ -69,62 +96,59 @@ function FixedExpensesTwo (){
 
                     <Grid item xl={9} lg={9} md={9} sm={12} xs={12} style={{height:'100vh'}} >
                     <Form className={classes.margins}>
-                    <Form.Row>
-                                <Form.Group as={Col}>
-                                    <h1 className={styles.heading}> Fixed Expenses (USD)</h1>
-                                </Form.Group>
+                                <Form.Row>
+                                    <Form.Group as={Col}>
+                                        <h1 className={styles.heading}> Fixed Expenses (USD)</h1>
+                                    </Form.Group> <Form.Group as={Col}></Form.Group>
+                                </Form.Row>
+                                <Form.Row>
+                                    <Form.Group as={Col}>
+                                        <Form.Label>Electric</Form.Label>
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.electric}
+                                        onChange={e => setfixedProp({...fixedProp, electric: e.target.value})} />
 
-                                <Form.Group as={Col}>
-                                    
-                                </Form.Group>
-                            </Form.Row>
-                                            <Form.Row>
-                                                <Form.Group as={Col}>
-                                                        <Form.Label>Miscellaneous</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
+                                        <Form.Label>Water and Sewer</Form.Label>
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.waterSewer}
+                                        onChange={e => setfixedProp({...fixedProp, waterSewer: e.target.value})}  />
 
-                                                        <Form.Label>Water and Sewer</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-
-                                                        <Form.Label>Garbase</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-                                            
-                                                        <Form.Label> Monthly Taxes </Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-                                            
-                                                        <Form.Label> Landlord Insurance USD</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-
-                                                </Form.Group>
-
-                                                <Form.Group as={Col}>
-                                                        <FormGroup>
-                                                        <Form.Label>Electric</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-
-                                                        <Form.Label>PMI</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-                                                    
-                                                        <Form.Label>HQA</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-
-                                                        <Form.Label>Insurance</Form.Label>
-                                                        <Form.Control className={classes.input} type="text" />
-                                                        </FormGroup>
+                                        <Form.Label>HOA</Form.Label>
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.HOA}
+                                        onChange={e => setfixedProp({...fixedProp, HOA: e.target.value})}  />
                                                         
+                                        <Form.Label> Insurance</Form.Label>
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.insurance}
+                                        onChange={e => setfixedProp({...fixedProp, insurance: e.target.value})}  />
 
-                                                </Form.Group>
-                                                                                        
-                                        </Form.Row>
+                                    </Form.Group>
 
-                                        <Form.Row>
-                                                    <FormGroup as={Col}>
-                                                        <Form.Label>Total</Form.Label>
-                                                        <Form.Control className={classes.inputtwo} type="text" placeholder=" 0 0 0 0 0"  />
-                                                    </FormGroup>
-                                                
-                                            </Form.Row>
-                                    </Form>
+                                    <Form.Group as={Col}>
+                                        <Form.Label>PMI</Form.Label>
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.PMI}
+                                        onChange={e => setfixedProp({...fixedProp, PMI: e.target.value})}  />
+                                                                
+                                        <Form.Label>Garbage</Form.Label>
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.garbage}
+                                        onChange={e => setfixedProp({...fixedProp, garbage: e.target.value})}  />
+
+                                        <Form.Label> Monthly Taxes </Form.Label>
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.taxes}
+                                        onChange={e => setfixedProp({...fixedProp, taxes: e.target.value})}  />
+
+                                        <Form.Label>Others</Form.Label>
+                                        <Form.Control className={classes.input} type="text" value={fixedProp.others}
+                                        onChange={e => setfixedProp({...fixedProp, others: e.target.value})}  />
+                                    </Form.Group>
+                                </Form.Row>
+
+                                <Form.Row>
+                                    <FormGroup as={Col}>
+                                        <Form.Label>Total</Form.Label>
+                                        <Form.Control className={classes.inputtwo} type="text" 
+                                        value={totalfixed}
+                                        placeholder=" 0 0 0 0 0"  />
+                                    </FormGroup>
+                                </Form.Row>
+                            </Form>
                     </Grid>
 
                     </SidebarContext>

@@ -9,21 +9,6 @@ import { Grid } from "@material-ui/core"
 
 
 const useStyles = createUseStyles({
-    container: {
-        height: '100%',
-        minHeight: 850
-    },
-    mainBlock: {
-        marginLeft: 255,
-        // padding: 30,
-        '@media (max-width: 900px)': {
-            marginLeft: 0
-        }
-    },
-    contentBlock: {
-        marginTop: 54
-    },
-
     input: {
         backgroundColor:"rgba(128, 0, 128, 0.1)",
         borderRadius: "15px",
@@ -52,6 +37,23 @@ function IncomeTwo (){
     const styleOther = {position: "fixed"}
     const theme = useTheme();
     const classes = useStyles({ theme });
+
+    
+//     const [totalIncome, setTotalIncome] = useState();
+
+//     useEffect(() => {
+//         function sum( obj ) {
+//             var sum = 0 ;
+//             for(var el in obj) {
+//                 sum += obj[el]==""?0:parseFloat(obj[el]);
+//             }
+//             return sum;
+//           }
+
+//           var summed = sum(incomeProp);
+//           setTotalIncome(summed)
+   
+//       }, [incomeProp]);
 
         return (
             <Grid container xl={12} lg={12} md={12} sm={12} xs={12}   direction="column"  justify="space-around"  style={{backgroundColor:"#e5e5e5"}}>

@@ -8,6 +8,7 @@ import { SidebarComponent, SidebarContext } from 'components/sidebar';
 import { Grid } from "@material-ui/core";
 import Pdf from "react-to-pdf";
 import {Form, FormGroup, Col} from 'react-bootstrap';
+import ReportPdfOne from './reportPdf/ReportPdfOne'
 
 const ref = React.createRef();
 const useStyles = createUseStyles({
@@ -78,7 +79,9 @@ function Report() {
                             </SidebarContext>
                         </Grid>
                     </Grid>
-        
+                <Grid item xl={12}>
+                    <ReportPdfOne />
+                </Grid>
 
                 <Grid item xl={12}>
                     <Footer style={styleOther} />

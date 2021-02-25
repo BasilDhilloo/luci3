@@ -65,44 +65,25 @@ function Income(){
                     <Grid item xl={9} lg={9} md={9} sm={12} xs={12} style={{height:'80vh'}} >
                     <Form className={classes.margins}>
                         <Form.Row>
-                                                    <Form.Group as={Col}>
-                                                            <Form.Label>After Repair Value</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" value={assumProp.afterRepairValue} 
-                                                            onChange={e => setassumProp({...assumProp, afterRepairValue: e.target.value})}/>
-                                                        
-                                                            <Form.Label>Selling Cost (%)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" value={assumProp.sellingCost}
-                                                            onChange={e => setassumProp({...assumProp, sellingCost: e.target.value})} />
+                            <Form.Group as={Col}>
+                                {/* <h1> Assumptions </h1>  */}
+                                <Form.Label>After Repair Value</Form.Label>
+                                <Form.Control className={classes.input} type="text" />
+                            
+                                <Form.Label>Selling Costs</Form.Label>
+                                <Form.Control className={classes.input} type="number" />
+                            </Form.Group>
 
-                                                            <Form.Label>Annual Property Growth (%) </Form.Label>
-                                                            <Form.Control className={classes.input} type="number" value={assumProp.annualPropGrowth} 
-                                                            onChange={e => setassumProp({...assumProp, annualPropGrowth: e.target.value})}placeholder=" 3 Weeks" />
+                            <Form.Group as={Col}>
+                                <Form.Label>Renovation Duration</Form.Label>
+                                <Form.Control className={classes.input} type="text" placeholder=" 3 Weeks" />
 
-                                                            <Form.Label>Annual Rental Growth (%)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" value={assumProp.annualRentalGrowth} 
-                                                            onChange={e => setassumProp({...assumProp, annualRentalGrowth: e.target.value})} />
-                                                    </Form.Group>
-
-                                                    <Form.Group as={Col}>
-                                                        <FormGroup>
-                                                            <Form.Label>Annual Expense Growth (%)</Form.Label>
-                                                            <Form.Control className={classes.input} type="number" value={assumProp.annualExpenseGrowth} 
-                                                            onChange={e => setassumProp({...assumProp, annualExpenseGrowth: e.target.value})}/>
-        
-                                                            <Form.Label>Renovation Duration (Weeks) </Form.Label>
-                                                            <Form.Control className={classes.input} type="number" value={assumProp.renovationDuration} 
-                                                            onChange={e => setassumProp({...assumProp, renovationDuration: e.target.value})}/>
-
-                                                            <Form.Label>Initial Vacancy (Weeks) </Form.Label>
-                                                            <Form.Control className={classes.input} type="number" value={assumProp.initialVacancy} 
-                                                            onChange={e => setassumProp({...assumProp, initialVacancy: e.target.value})}/>
-                                                        </FormGroup>      
-                                                    </Form.Group>
-                              </Form.Row>
-
-                        </Form>   
+                                <Form.Label>Renovation Duration</Form.Label>
+                                <Form.Control className={classes.input} type="text" placeholder=" 3 Weeks" />
+                            </Form.Group>
+                        </Form.Row>
+                    </Form>
                     </Grid>
-
                     </SidebarContext>
                 </Grid>
             </Grid>

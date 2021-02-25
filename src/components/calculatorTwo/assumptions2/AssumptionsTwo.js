@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, {useState } from 'react'
 import styles from './assumptions.module.css'
 import Header from 'components/header2/Header'
 import Footer from 'components/footer/Footer'
@@ -53,6 +53,15 @@ function ExpenseTwo (){
     // const styleOther = {position: "fixed"}
     const theme = useTheme();
     const classes = useStyles({ theme });
+    const [assumProp, setassumProp] = useState({
+        afterRepairValue: "",
+        sellingCost: "",
+        annualPropGrowth: "",
+        annualRentalGrowth: "",
+        annualExpenseGrowth: "",
+        renovationDuration: "",
+        initialVacancy: ""
+    })
 
         return (
             <Grid container xl={12} lg={12} md={12} sm={12} xs={12}   direction="column"  justify="space-around"  style={{backgroundColor:"#e5e5e5"}}>
