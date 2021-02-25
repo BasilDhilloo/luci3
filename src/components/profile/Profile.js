@@ -3,7 +3,7 @@ import Header from '../header2/Header'
 import Footer from "../footer/Footer";
 import 'antd/dist/antd.css';
 import ProfileImage from '../../assets/profile_image_with_camera_icon.png'
-import "./profile.css";
+import specificStyles from "./property.module.css";
 import styles from './profile.module.css'
 
 class Profile extends Component
@@ -12,10 +12,7 @@ class Profile extends Component
 
     return(
 
-
       <div style={{background:'white', color:'4B176A'}}>
-
-
         <Header/>
 
         <div className={"flex-container"}>

@@ -25,7 +25,6 @@ const useStyles = createUseStyles({
         paddingLeft: ({ level }) => 32 * level,
         transition: 'all 0.2s ease-in-out'
     },
-
     title: {
         fontSize: 16,
         lineHeight: '20px',

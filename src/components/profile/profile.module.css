@@ -8,8 +8,8 @@
 }
 
 .profileImage {
-    width: 300px;
-    height: 330px;
+    width: auto;
+    height: auto;
     /*margin-right: 10px;*/
     margin-left: 500px;
 
@@ -19,7 +19,7 @@
 .flexChild {
     flex: 100%;
     color: #4B176A;
-    margin-top: 45px;
+    margin-top:50px;
     /*justify-content: center;*/
     /*width: 40%;*/
     /*margin-left: 30px;*/

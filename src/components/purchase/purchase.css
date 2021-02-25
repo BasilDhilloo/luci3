@@ -1,29 +1,3 @@
-.property-layout-main{
-    background-color:aqua;
-    display: flex;
-    -ms-flex: auto;
-    flex: auto;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-height: 0;
-    background: #f0f2f5;
-}
-
-.property-layout-second{
-    /* background-color: aqua; */
-    background-color: #E5E5E5;
-    padding: 7px 50px !important;
-    height: 99vh;
-}
-
-.property-layout-sider{
-    flex-direction: row;
-    /* background-color: #ffff; */
-    background-color: #ffffff;
-    padding: 20px 30px 20px 30px !important;
-    /* margin-bottom: 50px; */
-    height: 98vh;
-}
 
 
 .flex-container {
@@ -44,22 +18,6 @@
     padding-left: 20px ;
 }  
 
-
-.flex-child h1{
-    font-family: "Roboto";
-    font-style: normal;
-    font-weight: bold;
-    font-size: 25px;
-    line-height: 29px;
-    text-align: center;
-    padding-left: 0px;
-    color: #4B176A;
-    /* margin-left: -25rem; */
-    display: inline-flex;
-    margin-left: -50px;
-    margin-bottom: 20px;
-    margin-top: 10px;
-}
 
 .flex-child label{
     font-family: "Montserrat";
@@ -113,7 +71,7 @@
     padding: .5rem;
 }
 
-.other-child .imgDiv{
+.imgDiv{
     height: 292px;
     width: 840px;
     margin-top: 5px;
@@ -135,11 +93,16 @@
         margin-left: -67px;
     }
 
+    .mainBlock-0-2-2 {
+            margin-left: 20px;
+    }
+
     .flex-child label{
         font-size: 16px;
         line-height: 16px;
         color: #4B176A;
         text-align: left;
+        display: table;
         margin-left: -70px;
     }
 
@@ -151,11 +114,13 @@
         margin-top: -100px;
     }
 
-    .flex-child h1{
-        display: inherit;
-        margin-left: -68px;
-        margin-bottom: 20px;
-        margin-top: 15px;
+    .property-layout-sider {
+        flex-direction: row;
+        /* background-color: #ffff; */
+        background-color: #ffffff;
+        padding: 20px 30px 20px 30px !important;
+        /* margin-bottom: 50px; */
+        height: 151vh;
     }
 }
 
@@ -169,6 +134,10 @@
         margin-bottom: 17px;
         margin-left: -60px;
     }
+
+    .mainBlock-0-2-2 {
+        margin-left: 20px;
+}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -181,6 +150,10 @@
         margin-bottom: 17px;
         margin-left: -60px;
     }
+
+    .mainBlock-0-2-2 {
+        margin-left: 20px;
+}
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -193,6 +166,10 @@
         margin-bottom: 17px;
         
     }
+
+    .mainBlock-0-2-2 {
+        margin-left: 20px;
+}
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -208,6 +185,12 @@
     .contentBlock-0-2-6 {
         margin-top: -40px;
         margin-left: 20px;
+    }
+
+    .mainBlock-0-2-2 {
+        /* padding: 30px; */
+        margin-left: 280px!important;
+        /* margin-top: -90px; */
     }
 }
 
@@ -229,6 +212,12 @@
         margin-top: -40px;
         margin-left: 20px;
 
+    }
+    
+    .mainBlock-0-2-2 {
+        padding: 30px;
+        margin-left: 280px;
+        margin-top: -90px;
     }
 
     .flex-child label{

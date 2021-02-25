@@ -13,7 +13,7 @@
     /* background-color: aqua; */
     background-color: #E5E5E5;
     padding: 7px 50px !important;
-    height: 99vh;
+    height: 80vh;
 }
 
 .property-layout-sider{
@@ -22,9 +22,12 @@
     background-color: #ffffff;
     padding: 20px 30px 20px 30px !important;
     /* margin-bottom: 50px; */
-    height: 98vh;
+    height: 78vh;
 }
 
+.bm-menu-wrap{
+    height: 72% !important;
+}
 
 .flex-container {
     display: flex;
@@ -149,6 +152,15 @@
 
     .flex-child form{
         margin-top: -100px;
+    }
+
+    .property-layout-sider {
+        flex-direction: row;
+        /* background-color: #ffff; */
+        background-color: #ffffff;
+        padding: 20px 30px 20px 30px !important;
+        /* margin-bottom: 50px; */
+        height: 165vh;
     }
 
     .flex-child h1{

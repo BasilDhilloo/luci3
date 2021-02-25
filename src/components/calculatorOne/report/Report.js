@@ -79,9 +79,9 @@ function Report() {
                             </SidebarContext>
                         </Grid>
                     </Grid>
-                <Grid item xl={12}>
+                {/* <Grid item xl={12}>
                     <ReportPdfOne />
-                </Grid>
+                </Grid> */}
 
                 <Grid item xl={12}>
                     <Footer style={styleOther} />

@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 import {Grid} from '@material-ui/core'
 import Header from '../header2/Header';
 import Footer from '../footer/Footer';
-import styles from "./LoginTwo.module.css"
+import styles from "./loginTwo.module.css"
 import {Form} from "react-bootstrap"
 import { BsBoxArrowInRight } from 'react-icons/bs'
 

@@ -9,7 +9,8 @@ import LoginTwo from '../components/login2/LoginTwo';
 import SignupTwo from '../components/signup2/SignupTwo';
 import PricingTwo from './../components/pricing2/PricingTwo';
 import About from './../components/about/About';
-// import PropertyContent from '../components/calculatorOne/propertycontent/PropertyContent'
+
+import PropertyContent from '../components/calculatorOne/propertycontent/PropertyContent'
 import Purchase from '../components/calculatorOne/purchase/Purchase'
 import NewRenovationTab from '../components/calculatorOne/newrenovationtab/NewRenovationTab'
 import FinancingOne from '../components/calculatorOne/financingone/FinancingOne'
@@ -45,7 +46,7 @@ import FAQs from "../components/faqs/FAQs";
 import ChatMenu from "../components/chat_menu/ChatMenu";
 
 
-const PropertyContent = lazy(() => import('./../components/calculatorOne/propertycontent/PropertyContent'));
+
 
 
 function Routes() {
