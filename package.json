@@ -26,6 +26,7 @@
         "react-scripts": "3.4.3",
         "react-super-responsive-table": "^5.2.0",
         "react-svg-line-chart": "^2.0.1",
+        "react-to-pdf": "0.0.13",
         "simple-flexbox": "^2.3.1"
     },
     "scripts": {

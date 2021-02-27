@@ -1,6 +1,6 @@
 /*---------chat window---------------*/
-.container{
-    max-width:900px;
+.container {
+    max-width: 900px;
 }
 .inbox_people {
     background: #fff;
@@ -33,13 +33,13 @@
     float: left;
     width: 40%;
 }
-
+/* 
 .srch_bar {
     display: inline-block;
     text-align: right;
     width: 60%;
     padding:
-}
+} */
 
 .headind_srch {
     padding: 10px 29px 10px 20px;
@@ -75,11 +75,10 @@
     margin: 0 0 0 -27px;
 }
 
-
 .chat_ib h5 {
     font-size: 15px;
     font-weight: bold;
-    color: #4B176A;
+    color: #4b176a;
     margin: 0 0 8px 0;
 }
 
@@ -90,7 +89,7 @@
 
 .chat_ib p {
     font-size: 12px;
-    color: #4B176A;
+    color: #4b176a;
     margin: auto;
     display: inline-block;
     white-space: nowrap;
@@ -107,7 +106,7 @@
 .chat_ib:hover h5 {
     font-size: 15px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0 0 8px 0;
 }
 
@@ -118,16 +117,13 @@
 
 .chat_ib:hover p {
     font-size: 12px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: auto;
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-
-
 
 .chat_ib_active {
     float: left;
@@ -138,7 +134,7 @@
 .chat_ib_active h5 {
     font-size: 15px;
     font-weight: bold;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: 0 0 8px 0;
 }
 
@@ -149,7 +145,7 @@
 
 .chat_ib_active p {
     font-size: 12px;
-    color: #FFFFFF;
+    color: #ffffff;
     margin: auto;
     display: inline-block;
     white-space: nowrap;
@@ -157,17 +153,13 @@
     text-overflow: ellipsis;
 }
 
-
-
-
-
 .chat_img {
     float: left;
     width: 11%;
 }
 
 .chat_img img {
-    width: 100%
+    width: 100%;
 }
 
 .chat_ib {
@@ -192,9 +184,8 @@
     border-radius: 10px;
     margin: 0;
     padding: 18px 16px 10px;
-    background: #4B176A;
-    color: #FFFFFF;
-
+    background: #4b176a;
+    color: #ffffff;
 }
 
 .chat_list_active {
@@ -202,9 +193,8 @@
     border-radius: 10px;
     margin: 0;
     padding: 18px 16px 10px;
-    background: #4B176A;
-    color: #FFFFFF;
-
+    background: #4b176a;
+    color: #ffffff;
 }
 
 .inbox_chat {
@@ -233,9 +223,9 @@
 }
 
 .received_withd_msg p {
-    background: #4B176A none repeat scroll 0 0;
+    background: #4b176a none repeat scroll 0 0;
     border-radius: 15px 5px 5px 0px;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 14px;
     margin: 0;
     padding: 20px 10px 5px 12px;
@@ -243,7 +233,7 @@
 }
 
 .time_date {
-    color: #4B176A;
+    color: #4b176a;
     display: block;
     font-size: 12px;
     margin: 8px 0 0;
@@ -253,33 +243,28 @@
     width: 57%;
 }
 
-.mesgs{
+.mesgs {
     float: left;
 
-    width:70%;
-    background: #F1F1F1;
+    width: 70%;
+    background: #f1f1f1;
     height: 650px;
     /*margin-bottom: 0px;*/
-
 }
 
-.mesgs_c2{
+.mesgs_c2 {
     /*float: left;*/
 
-
-
-    width:100%;
-    background: #F1F1F1;
-
-
+    width: 100%;
+    background: #f1f1f1;
 }
 
 .sent_msg p {
-    background:#4B176A;
+    background: #4b176a;
     border-radius: 5px 10px 0px 5px;
     font-size: 14px;
     margin: 0;
-    color: #FFFFFF;
+    color: #ffffff;
     padding: 20px 10px 5px 12px;
     width: 100%;
     display: inline-block;
@@ -289,13 +274,11 @@
     overflow: hidden;
     margin: 26px 0 26px;
     /*display: inline-block;*/
-
 }
 
 .outgoing_msg_img img {
     width: 100%;
 }
-
 
 .sent_msg {
     float: right;
@@ -310,19 +293,14 @@
     width: 6%;
 }
 
-
-
-
-
 .type_msg {
     border-top: 0px solid #c4c4c4;
     position: relative;
 }
 
-
 .msg_send_btn {
     background: #ffffff none repeat scroll 0 0;
-    border:none;
+    border: none;
     border-radius: 50%;
     color: black;
     cursor: pointer;
@@ -337,7 +315,7 @@
 .messaging {
     /*padding: 0 0 50px 0;*/
 
-    background: #FFFFFF;
+    background: #ffffff;
     border: 0px solid rgba(0, 0, 0, 0.05);
     box-sizing: border-box;
     box-shadow: 0px 4px 35px -7px rgba(0, 0, 0, 0.15);
@@ -347,21 +325,17 @@
     padding: 30px 15px 40px 25px;
     height: 526px;
     overflow-y: auto;
-
 }
-
 
 .titleBar {
-
     /*font-weight: bold;*/
     color: white;
-    background: #4B176A;
+    background: #4b176a;
     border-radius: 10px;
     /*margin-left: 15px;*/
-
 }
 
-.titleBar h6{
+.titleBar h6 {
     /*float: left;*/
     display: inline-block;
     /*font-weight: bold;*/
