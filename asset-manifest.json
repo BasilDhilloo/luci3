@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/luci/static/css/main.5275dc49.chunk.css",
+    "main.js": "/luci/static/js/main.c2f14522.chunk.js",
+    "main.js.map": "/luci/static/js/main.c2f14522.chunk.js.map",
+    "runtime-main.js": "/luci/static/js/runtime-main.8d1e60a3.js",
+    "runtime-main.js.map": "/luci/static/js/runtime-main.8d1e60a3.js.map",
+    "static/css/2.fbab7092.chunk.css": "/luci/static/css/2.fbab7092.chunk.css",
+    "static/js/2.003ba200.chunk.js": "/luci/static/js/2.003ba200.chunk.js",
+    "static/js/2.003ba200.chunk.js.map": "/luci/static/js/2.003ba200.chunk.js.map",
+    "index.html": "/luci/index.html",
+    "precache-manifest.35f80572814c4540c145dadfe4a5591e.js": "/luci/precache-manifest.35f80572814c4540c145dadfe4a5591e.js",
+    "service-worker.js": "/luci/service-worker.js",
+    "static/css/2.fbab7092.chunk.css.map": "/luci/static/css/2.fbab7092.chunk.css.map",
+    "static/css/main.5275dc49.chunk.css.map": "/luci/static/css/main.5275dc49.chunk.css.map",
+    "static/js/2.003ba200.chunk.js.LICENSE.txt": "/luci/static/js/2.003ba200.chunk.js.LICENSE.txt",
+    "static/media/admin_login_body_image.png": "/luci/static/media/admin_login_body_image.4329bc54.png",
+    "static/media/home.module.css": "/luci/static/media/background-2-m.af6f8096.jpg",
+    "static/media/background-2.jpeg": "/luci/static/media/background-2.945aaf69.jpeg",
+    "static/media/background.jpeg": "/luci/static/media/background.1f302f20.jpeg",
+    "static/media/calimage.png": "/luci/static/media/calimage.f3584381.png",
+    "static/media/contactus_body_image.png": "/luci/static/media/contactus_body_image.5889e667.png",
+    "static/media/contactus_jumbotron_image.png": "/luci/static/media/contactus_jumbotron_image.ed34bcc5.png",
+    "static/media/payment_details_body_image.png": "/luci/static/media/payment_details_body_image.08c91409.png",
+    "static/media/profile_image_with_camera_icon.png": "/luci/static/media/profile_image_with_camera_icon.e88ae68f.png",
+    "static/media/team.png": "/luci/static/media/team.215a21c9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8d1e60a3.js",
+    "static/css/2.fbab7092.chunk.css",
+    "static/js/2.003ba200.chunk.js",
+    "static/css/main.5275dc49.chunk.css",
+    "static/js/main.c2f14522.chunk.js"
+  ]
+}
